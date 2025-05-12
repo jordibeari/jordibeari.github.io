@@ -51,13 +51,13 @@
 			}
 		},
 		{
-			"name": "Scavenger Ambush",
+			"name": "Scavenge the Ruins",
 			"rarity": "common",
 			"mana_cost": "{1}{R}",
 			"type": "Sorcery",
 			"collector_number": "147",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/147_Scavenger Ambush.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/147_Scavenge the Ruins.png"
 			}
 		},
 		{
@@ -305,9 +305,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{1}{B}{B}",
 			"type": "Instant",
-			"collector_number": "81",
+			"collector_number": "80",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/81_Calm Before the Storm.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/80_Calm Before the Storm.png"
 			}
 		},
 		{
@@ -845,9 +845,9 @@
 			"rarity": "mythic",
 			"mana_cost": "{4}{B}{B}",
 			"type": "Creature — Elder Demon Dragon",
-			"collector_number": "80",
+			"collector_number": "79",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/80_Archdemon Gaismagorm.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/79_Archdemon Gaismagorm.png"
 			}
 		},
 		{
@@ -875,9 +875,9 @@
 			"rarity": "rare",
 			"mana_cost": "{1}{W}{U}",
 			"type": "Legendary Creature — Elder Leviathan",
-			"collector_number": "197",
+			"collector_number": "198",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/197_Jin Dahaad, The Frozen Peak.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/198_Jin Dahaad, The Frozen Peak.png"
 			}
 		},
 		{
@@ -1651,13 +1651,13 @@
 			}
 		},
 		{
-			"name": "Afflicted Appetite",
+			"name": "Clash of Dominance",
 			"rarity": "common",
 			"mana_cost": "{1}{B}",
 			"type": "Sorcery",
-			"collector_number": "79",
+			"collector_number": "81",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/79_Afflicted Appetite.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/81_Clash of Dominance.png"
 			}
 		},
 		{
@@ -2005,19 +2005,19 @@
 			"rarity": "uncommon",
 			"mana_cost": "{1}{W}{U}",
 			"type": "Creature — Leech Drake",
-			"collector_number": "196",
+			"collector_number": "197",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/196_Blank Stare Khezu.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/197_Blank Stare Khezu.png"
 			}
 		},
 		{
-			"name": "Thunderlord's Judgement",
+			"name": "Absolute Zero",
 			"rarity": "uncommon",
-			"mana_cost": "{1}{W}{U}{U}",
-			"type": "Sorcery",
-			"collector_number": "198",
+			"mana_cost": "{W}{W}{U}{U}",
+			"type": "Instant",
+			"collector_number": "196",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/198_Thunderlord's Judgement.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/196_Absolute Zero.png"
 			}
 		},
 		{
@@ -2780,7 +2780,7 @@
 		{
 			"name": "Shagaru Magala",
 			"rarity": "mythic",
-			"mana_cost": "{1}{U}{B}{R}{G}",
+			"mana_cost": "{2}{U}{B}{R}{G}",
 			"type": "Legendary Creature — Elder Dragon God",
 			"collector_number": "238",
 			"image_uris": {
@@ -3180,7 +3180,7 @@
 	4 Gatling Gun
 	4 God Serpent Remains
 	4 Blank Stare Khezu
-	4 Thunderlord's Judgement
+	4 Absolute Zero
 	4 Ice Armor Zamtrios
 	4 Tides of Battle
 	4 Volatile Presence
@@ -3236,7 +3236,7 @@
 	8 Binding Chatacabra
 	8 Survival of the Biggest
 	8 Scarlet Rose Lala Barina
-	8 Scavenger Ambush
+	8 Scavenge the Ruins
 	8 Shell Smash
 	8 Pioneer Doshaguma
 	8 Hurt From The Dirt
@@ -3275,7 +3275,7 @@
 	8 Strike Down
 	8 Desperate Hunger
 	8 Death Defies Death
-	8 Afflicted Appetite
+	8 Clash of Dominance
 	8 Wade Through Bones
 	8 Opportunistic Remobra
 	8 Cowardly Jagras
@@ -3324,7 +3324,7 @@
 	6 Binding Chatacabra
 	6 Survival of the Biggest
 	6 Scarlet Rose Lala Barina
-	6 Scavenger Ambush
+	6 Scavenge the Ruins
 	6 Shell Smash
 	6 Pioneer Doshaguma
 	6 Hurt From The Dirt
@@ -3484,7 +3484,7 @@
 	6 Strike Down
 	6 Desperate Hunger
 	6 Death Defies Death
-	6 Afflicted Appetite
+	6 Clash of Dominance
 	6 Wade Through Bones
 	6 Opportunistic Remobra
 	6 Cowardly Jagras
@@ -3520,7 +3520,7 @@
 	6 Crush Carapace
 	6 Taunting Facade
 	15 Blank Stare Khezu
-	15 Thunderlord's Judgement
+	15 Absolute Zero
 	15 Ice Armor Zamtrios
 	15 Tides of Battle
 	15 Volatile Presence
