@@ -3020,7 +3020,7 @@
 		{
 			"name": "Venomous Wroggi",
 			"rarity": "common",
-			"mana_cost": "{G}",
+			"mana_cost": "",
 			"type": "Token Creature — Frog Lizard",
 			"collector_number": "21",
 			"image_uris": {
@@ -3030,7 +3030,7 @@
 		{
 			"name": "Cunning Baggi",
 			"rarity": "common",
-			"mana_cost": "{U}",
+			"mana_cost": "",
 			"type": "Token Creature — Bird Lizard",
 			"collector_number": "8",
 			"image_uris": {
