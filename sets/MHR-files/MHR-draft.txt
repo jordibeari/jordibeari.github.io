@@ -1,0 +1,3597 @@
+[CustomCards]
+	[
+		{
+			"name": "Flame-Tail Quematrice",
+			"rarity": "common",
+			"mana_cost": "{5}{W}",
+			"type": "Creature — Dinosaur Bird",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/14_Flame-Tail Quematrice.png"
+			}
+		},
+		{
+			"name": "Curious Nulberry",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/10_Curious Nulberry.png"
+			}
+		},
+		{
+			"name": "Binding Chatacabra",
+			"rarity": "common",
+			"mana_cost": "{5}{U}",
+			"type": "Creature — Frog",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/44_Binding Chatacabra.png"
+			}
+		},
+		{
+			"name": "Survival of the Biggest",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/110_Survival of the Biggest.png"
+			}
+		},
+		{
+			"name": "Scarlet Rose Lala Barina",
+			"rarity": "common",
+			"mana_cost": "{5}{R}",
+			"type": "Creature — Spider Plant",
+			"collector_number": "146",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/146_Scarlet Rose Lala Barina.png"
+			}
+		},
+		{
+			"name": "Scavenger Ambush",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Sorcery",
+			"collector_number": "147",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/147_Scavenger Ambush.png"
+			}
+		},
+		{
+			"name": "Shell Smash",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "148",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/148_Shell Smash.png"
+			}
+		},
+		{
+			"name": "Pioneer Doshaguma",
+			"rarity": "common",
+			"mana_cost": "{5}{G}",
+			"type": "Creature — Beast",
+			"collector_number": "180",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/180_Pioneer Doshaguma.png"
+			}
+		},
+		{
+			"name": "Hurt From The Dirt",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "170",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/170_Hurt From The Dirt.png"
+			}
+		},
+		{
+			"name": "Crimson Cannonball Volvidon",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Armadillo",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/9_Crimson Cannonball Volvidon.png"
+			}
+		},
+		{
+			"name": "Deep Snow Beotodus",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Fish Dinosaur",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/11_Deep Snow Beotodus.png"
+			}
+		},
+		{
+			"name": "Floating Sky Paolumu",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Bat",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/15_Floating Sky Paolumu.png"
+			}
+		},
+		{
+			"name": "Azure Lightning Lagiacrus",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Leviathan",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/5_Azure Lightning Lagiacrus.png"
+			}
+		},
+		{
+			"name": "Wind Drifting Legiana",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Creature — Wyvern",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/38_Wind Drifting Legiana.png"
+			}
+		},
+		{
+			"name": "Soporific Siren Somnacanth",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{W}",
+			"type": "Creature — Merfolk Wyvern",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/33_Soporific Siren Somnacanth.png"
+			}
+		},
+		{
+			"name": "Backed By The Pack",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}",
+			"type": "Enchantment",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/6_Backed By The Pack.png"
+			}
+		},
+		{
+			"name": "Bewitching Mizutsune",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Fox Dragon",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/43_Bewitching Mizutsune.png"
+			}
+		},
+		{
+			"name": "Sparking Tobi-Kadachi",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Squirrel Drake",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/68_Sparking Tobi-Kadachi.png"
+			}
+		},
+		{
+			"name": "Wind Shear Hirabami",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{U}",
+			"type": "Creature — Snake Wyvern",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/78_Wind Shear Hirabami.png"
+			}
+		},
+		{
+			"name": "Mud Hermit Almudron",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Drake",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/59_Mud Hermit Almudron.png"
+			}
+		},
+		{
+			"name": "Violet Foresight",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Instant",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/76_Violet Foresight.png"
+			}
+		},
+		{
+			"name": "Crimson Ambush",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Instant",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/46_Crimson Ambush.png"
+			}
+		},
+		{
+			"name": "Archdemon's Beckoning Call",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Enchantment — Aura",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/41_Archdemon's Beckoning Call.png"
+			}
+		},
+		{
+			"name": "Scoutfly Lantern",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Artifact",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/64_Scoutfly Lantern.png"
+			}
+		},
+		{
+			"name": "Cruel Claw Odogaron",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature — Dog",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/84_Cruel Claw Odogaron.png"
+			}
+		},
+		{
+			"name": "Howling Yian Garuga",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Bird Drake",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/96_Howling Yian Garuga.png"
+			}
+		},
+		{
+			"name": "Seltas Queen",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Insect Noble",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/106_Seltas Queen.png"
+			}
+		},
+		{
+			"name": "Swamp Spout Rompompolo",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{B}",
+			"type": "Creature — Insect Beast",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/111_Swamp Spout Rompompolo.png"
+			}
+		},
+		{
+			"name": "Emerge From Effluvia",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/87_Emerge From Effluvia.png"
+			}
+		},
+		{
+			"name": "Fatal Entry",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}",
+			"type": "Instant",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/88_Fatal Entry.png"
+			}
+		},
+		{
+			"name": "Calm Before the Storm",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Instant",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/81_Calm Before the Storm.png"
+			}
+		},
+		{
+			"name": "Vile Dastardly Aknosom",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature — Bird Warrior",
+			"collector_number": "153",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/153_Vile Dastardly Aknosom.png"
+			}
+		},
+		{
+			"name": "Shining Thunder Rey Dau",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Creature — Dragon",
+			"collector_number": "149",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/149_Shining Thunder Rey Dau.png"
+			}
+		},
+		{
+			"name": "Empress Rakna Kadaki",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Spider Noble",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/129_Empress Rakna Kadaki.png"
+			}
+		},
+		{
+			"name": "Savage Jaw Anjanath",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{R}",
+			"type": "Creature — Dinosaur Wyvern",
+			"collector_number": "144",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/144_Savage Jaw Anjanath.png"
+			}
+		},
+		{
+			"name": "Ebon Hellfire",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/128_Ebon Hellfire.png"
+			}
+		},
+		{
+			"name": "Might of the Elements",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/141_Might of the Elements.png"
+			}
+		},
+		{
+			"name": "Reckless Rage",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "143",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/143_Reckless Rage.png"
+			}
+		},
+		{
+			"name": "Oni Frog Tetsucabra",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature — Frog Demon",
+			"collector_number": "178",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/178_Oni Frog Tetsucabra.png"
+			}
+		},
+		{
+			"name": "Molten Lavasioth",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Fish",
+			"collector_number": "176",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/176_Molten Lavasioth.png"
+			}
+		},
+		{
+			"name": "Toxic Nebula Gigginox",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Leech Drake",
+			"collector_number": "190",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/190_Toxic Nebula Gigginox.png"
+			}
+		},
+		{
+			"name": "Bellowing Boulder Basarios",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Elemental Wyvern",
+			"collector_number": "159",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/159_Bellowing Boulder Basarios.png"
+			}
+		},
+		{
+			"name": "Steady Mountain Gammoth",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{G}{G}",
+			"type": "Creature — Elephant Beast",
+			"collector_number": "185",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/185_Steady Mountain Gammoth.png"
+			}
+		},
+		{
+			"name": "Territorial Dispute",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "189",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/189_Territorial Dispute.png"
+			}
+		},
+		{
+			"name": "Rising Threat",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "181",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/181_Rising Threat.png"
+			}
+		},
+		{
+			"name": "Lord of Lightning Zinogre",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Wolf Wyvern",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/22_Lord of Lightning Zinogre.png"
+			}
+		},
+		{
+			"name": "Thousand Blade Seregios",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}",
+			"type": "Legendary Creature — Armadillo Wyvern",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/35_Thousand Blade Seregios.png"
+			}
+		},
+		{
+			"name": "Mist Phantom Chameleos",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Legendary Creature — Elder Lizard",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/24_Mist Phantom Chameleos.png"
+			}
+		},
+		{
+			"name": "Scorching Blade Glavenus",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Knight Wyvern",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/31_Scorching Blade Glavenus.png"
+			}
+		},
+		{
+			"name": "Sapphire of the Emperor",
+			"rarity": "rare",
+			"mana_cost": "{X}{W}{W}{W}",
+			"type": "Sorcery",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/29_Sapphire of the Emperor.png"
+			}
+		},
+		{
+			"name": "Guardian Sanctum",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Artifact",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/18_Guardian Sanctum.png"
+			}
+		},
+		{
+			"name": "Nocturnal Malfestio",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Bird",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/60_Nocturnal Malfestio.png"
+			}
+		},
+		{
+			"name": "Sterling Pride Kirin",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}",
+			"type": "Legendary Creature — Elder Kirin",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/69_Sterling Pride Kirin.png"
+			}
+		},
+		{
+			"name": "Ibushi, Breath of Ire",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Legendary Creature — Elder Serpent",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/53_Ibushi, Breath of Ire.png"
+			}
+		},
+		{
+			"name": "Subzero Knight Barioth",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Cat Knight Drake",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/70_Subzero Knight Barioth.png"
+			}
+		},
+		{
+			"name": "Flame Queen Lunastra",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Elder Dragon Cat",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/50_Flame Queen Lunastra.png"
+			}
+		},
+		{
+			"name": "The Tale of Ice and Fire",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Enchantment — Saga",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/71_The Tale of Ice and Fire.png"
+			}
+		},
+		{
+			"name": "Lost in the Maze",
+			"rarity": "rare",
+			"mana_cost": "{X}{U}{U}",
+			"type": "Enchantment",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/56_Lost in the Maze.png"
+			}
+		},
+		{
+			"name": "Blackveil Vaal Hazak",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}",
+			"type": "Legendary Creature — Elder Dragon Fungus",
+			"collector_number": "160",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/160_Blackveil Vaal Hazak.png"
+			}
+		},
+		{
+			"name": "Piercing Xu Wu",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Creature — Octopus Assassin",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/103_Piercing Xu Wu.png"
+			}
+		},
+		{
+			"name": "Red Glare Nargacuga",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Cat Rogue",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/104_Red Glare Nargacuga.png"
+			}
+		},
+		{
+			"name": "Hell-Brawler Brachydios",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Wyvern Warrior",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/95_Hell-Brawler Brachydios.png"
+			}
+		},
+		{
+			"name": "The Great Dragon War",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Enchantment — Saga",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/92_The Great Dragon War.png"
+			}
+		},
+		{
+			"name": "Cold Front",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/82_Cold Front.png"
+			}
+		},
+		{
+			"name": "Grievous Wound",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Enchantment — Aura",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/94_Grievous Wound.png"
+			}
+		},
+		{
+			"name": "Blazing Ajarakan",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Creature — Ape Beast",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/122_Blazing Ajarakan.png"
+			}
+		},
+		{
+			"name": "Hellflame Nu Udra",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Creature — Octopus Elemental",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/137_Hellflame Nu Udra.png"
+			}
+		},
+		{
+			"name": "Lightning Revolt Astalos",
+			"rarity": "rare",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Creature — Insect Dragon",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/140_Lightning Revolt Astalos.png"
+			}
+		},
+		{
+			"name": "Synthetic Aberration",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "150",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/150_Synthetic Aberration.png"
+			}
+		},
+		{
+			"name": "Wreathed in Hellfire",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Enchantment",
+			"collector_number": "155",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/155_Wreathed in Hellfire.png"
+			}
+		},
+		{
+			"name": "Armored Gravios",
+			"rarity": "rare",
+			"mana_cost": "{6}{G}{G}",
+			"type": "Creature — Elemental Wyvern",
+			"collector_number": "158",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/158_Armored Gravios.png"
+			}
+		},
+		{
+			"name": "Vaal Hazak",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Zombie Dragon",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/114_Vaal Hazak.png"
+			}
+		},
+		{
+			"name": "Fortress Shen Gaoren",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Legendary Creature — Elder Crab",
+			"collector_number": "167",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/167_Fortress Shen Gaoren.png"
+			}
+		},
+		{
+			"name": "Pavilion Empress Ahtal-Ka",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Insect Wyvern",
+			"collector_number": "179",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/179_Pavilion Empress Ahtal-Ka.png"
+			}
+		},
+		{
+			"name": "Malice Tiger Magnamalo",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Cat Beast",
+			"collector_number": "175",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/175_Malice Tiger Magnamalo.png"
+			}
+		},
+		{
+			"name": "Flush from the thicket",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "166",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/166_Flush from the thicket.png"
+			}
+		},
+		{
+			"name": "The Dragontorch",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Legendary Artifact",
+			"collector_number": "165",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/165_The Dragontorch.png"
+			}
+		},
+		{
+			"name": "Amatsu, Heaven's Catastrophe",
+			"rarity": "mythic",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Dragon Angel",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/3_Amatsu, Heaven's Catastrophe.png"
+			}
+		},
+		{
+			"name": "Shara Ishvalda, the Everwyrm",
+			"rarity": "mythic",
+			"mana_cost": "{3}{W}",
+			"type": "Legendary Creature — Elder Horror",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/32_Shara Ishvalda, the Everwyrm.png"
+			}
+		},
+		{
+			"name": "Shining Dragon Ceadeus",
+			"rarity": "mythic",
+			"mana_cost": "{4}{U}{U}{U}",
+			"type": "Creature — Elder Leviathan",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/65_Shining Dragon Ceadeus.png"
+			}
+		},
+		{
+			"name": "Ukanlos, Tyrant of Ice",
+			"rarity": "mythic",
+			"mana_cost": "{4}{U}{U}{U}{U}",
+			"type": "Creature — Dragon God",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/75_Ukanlos, Tyrant of Ice.png"
+			}
+		},
+		{
+			"name": "Onyx Oblivion Gogmazios",
+			"rarity": "mythic",
+			"mana_cost": "{5}{B}{B}{B}",
+			"type": "Creature — Elemental Dragon",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/101_Onyx Oblivion Gogmazios.png"
+			}
+		},
+		{
+			"name": "Akantor, Tyrant of Fire",
+			"rarity": "mythic",
+			"mana_cost": "{4}{R}{R}{R}{R}",
+			"type": "Creature — Dragon God",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/120_Akantor, Tyrant of Fire.png"
+			}
+		},
+		{
+			"name": "Zorah Magdoros",
+			"rarity": "mythic",
+			"mana_cost": "{4}{R}",
+			"type": "Legendary Creature — Elder Elemental",
+			"collector_number": "156",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/156_Zorah Magdoros.png"
+			}
+		},
+		{
+			"name": "Archdemon Gaismagorm",
+			"rarity": "mythic",
+			"mana_cost": "{4}{B}{B}",
+			"type": "Creature — Elder Demon Dragon",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/80_Archdemon Gaismagorm.png"
+			}
+		},
+		{
+			"name": "Yama Tsukami",
+			"rarity": "mythic",
+			"mana_cost": "{3}{G}{G}{G}",
+			"type": "Creature — Elder Plant",
+			"collector_number": "195",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/195_Yama Tsukami.png"
+			}
+		},
+		{
+			"name": "Lao-Shan Lung",
+			"rarity": "mythic",
+			"mana_cost": "{5}{G}{G}",
+			"type": "Creature — Juggernaut Dragon",
+			"collector_number": "174",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/174_Lao-Shan Lung.png"
+			}
+		},
+		{
+			"name": "Jin Dahaad, The Frozen Peak",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{U}",
+			"type": "Legendary Creature — Elder Leviathan",
+			"collector_number": "197",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/197_Jin Dahaad, The Frozen Peak.png"
+			}
+		},
+		{
+			"name": "Abyssal Namielle",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Creature — Jellyfish Dragon",
+			"collector_number": "199",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/199_Abyssal Namielle.png"
+			}
+		},
+		{
+			"name": "Rock Bandit Dodogama",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{R}",
+			"type": "Creature — Frog Wyvern",
+			"collector_number": "202",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/202_Rock Bandit Dodogama.png"
+			}
+		},
+		{
+			"name": "Dah'ren Mohran",
+			"rarity": "rare",
+			"mana_cost": "{4}{G}{W}{W}",
+			"type": "Legendary Creature — Elder Leviathan",
+			"collector_number": "208",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/208_Dah'ren Mohran.png"
+			}
+		},
+		{
+			"name": "Viper Tobi-Kadachi",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{G}",
+			"type": "Creature — Snake Squirrel Drake",
+			"collector_number": "219",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/219_Viper Tobi-Kadachi.png"
+			}
+		},
+		{
+			"name": "Golden Mane Rajang",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}{W}",
+			"type": "Creature — Ape Beast Berserker",
+			"collector_number": "220",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/220_Golden Mane Rajang.png"
+			}
+		},
+		{
+			"name": "Truffle Hunter Mosswine",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact Creature — Plant Boar",
+			"collector_number": "252",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/252_Truffle Hunter Mosswine.png"
+			}
+		},
+		{
+			"name": "Boaboa Clan",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact Creature — Cat Shaman",
+			"collector_number": "240",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/240_Boaboa Clan.png"
+			}
+		},
+		{
+			"name": "Wading Slagtoth",
+			"rarity": "common",
+			"mana_cost": "{4}",
+			"type": "Artifact Creature — Hippo",
+			"collector_number": "253",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/253_Wading Slagtoth.png"
+			}
+		},
+		{
+			"name": "Forlorn Camp",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "244",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/244_Forlorn Camp.png"
+			}
+		},
+		{
+			"name": "Shield Bug Konchu",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact Creature — Insect",
+			"collector_number": "251",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/251_Shield Bug Konchu.png"
+			}
+		},
+		{
+			"name": "Lightning Rod Ceratonoth",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact Creature — Lizard",
+			"collector_number": "248",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/248_Lightning Rod Ceratonoth.png"
+			}
+		},
+		{
+			"name": "Sand Sea Balahara",
+			"rarity": "uncommon",
+			"mana_cost": "{4}",
+			"type": "Artifact Creature — Leviathan Wurm",
+			"collector_number": "250",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/250_Sand Sea Balahara.png"
+			}
+		},
+		{
+			"name": "Explosive Hammer Uragaan",
+			"rarity": "uncommon",
+			"mana_cost": "{5}",
+			"type": "Artifact Creature — Beast Wyvern",
+			"collector_number": "241",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/241_Explosive Hammer Uragaan.png"
+			}
+		},
+		{
+			"name": "Malzeno, Scarlet Feast",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}{W}{B}",
+			"type": "Legendary Creature — Vampire Dragon",
+			"collector_number": "235",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/235_Malzeno, Scarlet Feast.png"
+			}
+		},
+		{
+			"name": "Invading Tyrant Bazelgeuse",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{R}{G}",
+			"type": "Creature — Dragon Dreadnought",
+			"collector_number": "233",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/233_Invading Tyrant Bazelgeuse.png"
+			}
+		},
+		{
+			"name": "Kushala Daora",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{U}{U}{B}",
+			"type": "Artifact Creature — Elder Dragon",
+			"collector_number": "234",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/234_Kushala Daora.png"
+			}
+		},
+		{
+			"name": "Alatreon, Brilliant Darkness",
+			"rarity": "mythic",
+			"mana_cost": "{2}{U}{B}{R}",
+			"type": "Legendary Creature — Elder Dragon",
+			"collector_number": "225",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/225_Alatreon, Brilliant Darkness.png"
+			}
+		},
+		{
+			"name": "Arkveld, Ashen Blade Unearthed",
+			"rarity": "mythic",
+			"mana_cost": "{B}{R}{G}",
+			"type": "Legendary Creature — Dragon Wraith",
+			"collector_number": "227",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/227_Arkveld, Ashen Blade Unearthed.png"
+			}
+		},
+		{
+			"name": "Safi'Jiiva, Sapphire Emperor",
+			"rarity": "mythic",
+			"mana_cost": "{4}{R}{G}{W}",
+			"type": "Legendary Creature — Dragon Incarnation",
+			"collector_number": "237",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/237_Safi'Jiiva, Sapphire Emperor.png"
+			}
+		},
+		{
+			"name": "Velkhana the Iceborne",
+			"rarity": "mythic",
+			"mana_cost": "{2}{G}{W}{W}{U}",
+			"type": "Legendary Creature — Elemental Dragon",
+			"collector_number": "239",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/239_Velkhana the Iceborne.png"
+			}
+		},
+		{
+			"name": "The Black Flame, Fatalis",
+			"rarity": "mythic",
+			"mana_cost": "{2}{R}{W}{B}",
+			"type": "Legendary Creature — Elder Dragon",
+			"collector_number": "228",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/228_The Black Flame, Fatalis.png"
+			}
+		},
+		{
+			"name": "Mantle in Gold",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}",
+			"type": "Instant",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/23_Mantle in Gold.png"
+			}
+		},
+		{
+			"name": "Underbrush Ambush",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Sorcery",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/36_Underbrush Ambush.png"
+			}
+		},
+		{
+			"name": "King's Verdict",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Instant",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/20_King's Verdict.png"
+			}
+		},
+		{
+			"name": "Abyssal Strike",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/40_Abyssal Strike.png"
+			}
+		},
+		{
+			"name": "Qurio's Compulsion",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Enchantment — Aura",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/61_Qurio's Compulsion.png"
+			}
+		},
+		{
+			"name": "Sleep",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/67_Sleep.png"
+			}
+		},
+		{
+			"name": "Steel Tempest",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "186",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/186_Steel Tempest.png"
+			}
+		},
+		{
+			"name": "Unstable Temperament",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Enchantment",
+			"collector_number": "191",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/191_Unstable Temperament.png"
+			}
+		},
+		{
+			"name": "Invasive Species",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}",
+			"type": "Enchantment",
+			"collector_number": "172",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/172_Invasive Species.png"
+			}
+		},
+		{
+			"name": "Witness the End",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Sorcery",
+			"collector_number": "154",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/154_Witness the End.png"
+			}
+		},
+		{
+			"name": "Predator's Domain",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Enchantment",
+			"collector_number": "142",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/142_Predator's Domain.png"
+			}
+		},
+		{
+			"name": "Ahtal Neset, Empress' Throne",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}",
+			"type": "Legendary Artifact — Equipment Junk",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/119_Ahtal Neset, Empress' Throne.png"
+			}
+		},
+		{
+			"name": "Pierce the Black Veil",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/102_Pierce the Black Veil.png"
+			}
+		},
+		{
+			"name": "Glare of the Everwyrm",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}",
+			"type": "Enchantment",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/91_Glare of the Everwyrm.png"
+			}
+		},
+		{
+			"name": "Creeping Incubation",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Enchantment",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/83_Creeping Incubation.png"
+			}
+		},
+		{
+			"name": "Pitfall Trap",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "249",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/249_Pitfall Trap.png"
+			}
+		},
+		{
+			"name": "Felyne Explorer's Goggles",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment",
+			"collector_number": "242",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/242_Felyne Explorer's Goggles.png"
+			}
+		},
+		{
+			"name": "Grimalkyne Vine Trap",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "247",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/247_Grimalkyne Vine Trap.png"
+			}
+		},
+		{
+			"name": "Gatling Gun",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment",
+			"collector_number": "245",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/245_Gatling Gun.png"
+			}
+		},
+		{
+			"name": "God Serpent Remains",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "246",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/246_God Serpent Remains.png"
+			}
+		},
+		{
+			"name": "Dire Miralis, the Calamity",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{R}{W}",
+			"type": "Legendary Creature — Elder Elemental",
+			"collector_number": "230",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/230_Dire Miralis, the Calamity.png"
+			}
+		},
+		{
+			"name": "Dalamadur, Shah Eternal",
+			"rarity": "mythic",
+			"mana_cost": "{3}{W}{B}{G}",
+			"type": "Legendary Creature — Elder Snake God",
+			"collector_number": "229",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/229_Dalamadur, Shah Eternal.png"
+			}
+		},
+		{
+			"name": "Zoh Shia, the White Seraph",
+			"rarity": "mythic",
+			"mana_cost": "{4}",
+			"type": "Legendary Artifact Creature — Elder Construct",
+			"collector_number": "254",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/254_Zoh Shia, the White Seraph.png"
+			}
+		},
+		{
+			"name": "Ear-Splitting Brute Tigrex",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}{R}{G}",
+			"type": "Creature — Giant Dinosaur Wyvern",
+			"collector_number": "206",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/206_Ear-Splitting Brute Tigrex.png"
+			}
+		},
+		{
+			"name": "Nakarkos, Harbinger of Death",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "Legendary Creature — Elder Kraken",
+			"collector_number": "213",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/213_Nakarkos, Harbinger of Death.png"
+			}
+		},
+		{
+			"name": "Dark Eclipse Gore Magala",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{R}",
+			"type": "Legendary Creature — Dragon Demigod",
+			"collector_number": "215",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/215_Dark Eclipse Gore Magala.png"
+			}
+		},
+		{
+			"name": "Crested Torrent Uth Duna",
+			"rarity": "rare",
+			"mana_cost": "{G}{G}{U}{U}",
+			"type": "Creature",
+			"collector_number": "222",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/222_Crested Torrent Uth Duna.png"
+			}
+		},
+		{
+			"name": "Flame Barrel Bomb",
+			"rarity": "common",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Instant",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/13_Flame Barrel Bomb.png"
+			}
+		},
+		{
+			"name": "Vanishing Mists",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Enchantment",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/37_Vanishing Mists.png"
+			}
+		},
+		{
+			"name": "Coralhorn Orchestra",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/7_Coralhorn Orchestra.png"
+			}
+		},
+		{
+			"name": "Cunning Baggi",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Creature — Bird Lizard",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/47_Cunning Baggi.png"
+			}
+		},
+		{
+			"name": "Miasmal Hypnocatrice",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Cockatrice",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/57_Miasmal Hypnocatrice.png"
+			}
+		},
+		{
+			"name": "Silver Slider Lagombi",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Rabbit Beast",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/66_Silver Slider Lagombi.png"
+			}
+		},
+		{
+			"name": "Elusive Bnahabra",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Insect",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/49_Elusive Bnahabra.png"
+			}
+		},
+		{
+			"name": "Kecha Wacha",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Monkey Beast",
+			"collector_number": "173",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/173_Kecha Wacha.png"
+			}
+		},
+		{
+			"name": "Royal Ludroth",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Plant Drake",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/63_Royal Ludroth.png"
+			}
+		},
+		{
+			"name": "Tzitzi-Ya-Ku",
+			"rarity": "common",
+			"mana_cost": "{4}{U}",
+			"type": "Creature — Bird Lizard",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/74_Tzitzi-Ya-Ku.png"
+			}
+		},
+		{
+			"name": "Longclaw Boggi",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Dog Lizard",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/55_Longclaw Boggi.png"
+			}
+		},
+		{
+			"name": "Hypnotic Wingbeat",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Instant",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/52_Hypnotic Wingbeat.png"
+			}
+		},
+		{
+			"name": "Wind Pressure",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Instant",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/77_Wind Pressure.png"
+			}
+		},
+		{
+			"name": "Blight Bolt",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/45_Blight Bolt.png"
+			}
+		},
+		{
+			"name": "Devour Body and Mind",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/48_Devour Body and Mind.png"
+			}
+		},
+		{
+			"name": "Aurortle's Moxie",
+			"rarity": "common",
+			"mana_cost": "{U}{U}",
+			"type": "Enchantment — Aura",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/42_Aurortle's Moxie.png"
+			}
+		},
+		{
+			"name": "Rearing Thunderbolt",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Sorcery",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/62_Rearing Thunderbolt.png"
+			}
+		},
+		{
+			"name": "Stalking Girros",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Salamander",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/108_Stalking Girros.png"
+			}
+		},
+		{
+			"name": "Melynx Shadowpaw",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Cat Rogue",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/99_Melynx Shadowpaw.png"
+			}
+		},
+		{
+			"name": "Rimebreath Blangonga",
+			"rarity": "common",
+			"mana_cost": "{B}{B}",
+			"type": "Creature — Ape",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/105_Rimebreath Blangonga.png"
+			}
+		},
+		{
+			"name": "Feasting Ceanataur",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Crab",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/89_Feasting Ceanataur.png"
+			}
+		},
+		{
+			"name": "Vespoid Queen",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Insect Noble",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/115_Vespoid Queen.png"
+			}
+		},
+		{
+			"name": "Nergigante, the Extinction",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}",
+			"type": "Legendary Creature — Dragon Hunter",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/100_Nergigante, the Extinction.png"
+			}
+		},
+		{
+			"name": "Tail Hammer Duramboros",
+			"rarity": "common",
+			"mana_cost": "{5}{B}{B}",
+			"type": "Creature — Beast Dinosaur",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/112_Tail Hammer Duramboros.png"
+			}
+		},
+		{
+			"name": "Latent Mouth Nibelsnarf",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Leviathan",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/98_Latent Mouth Nibelsnarf.png"
+			}
+		},
+		{
+			"name": "Sinister Shadow Jyuratodos",
+			"rarity": "common",
+			"mana_cost": "{5}{B}",
+			"type": "Creature — Fish Drake",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/107_Sinister Shadow Jyuratodos.png"
+			}
+		},
+		{
+			"name": "Strike Down",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Instant",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/109_Strike Down.png"
+			}
+		},
+		{
+			"name": "Desperate Hunger",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Instant",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/86_Desperate Hunger.png"
+			}
+		},
+		{
+			"name": "Death Defies Death",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/85_Death Defies Death.png"
+			}
+		},
+		{
+			"name": "Afflicted Appetite",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/79_Afflicted Appetite.png"
+			}
+		},
+		{
+			"name": "Wade Through Bones",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Sorcery",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/117_Wade Through Bones.png"
+			}
+		},
+		{
+			"name": "Opportunistic Remobra",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Snake Bird",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/25_Opportunistic Remobra.png"
+			}
+		},
+		{
+			"name": "Cowardly Jagras",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Lizard",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/8_Cowardly Jagras.png"
+			}
+		},
+		{
+			"name": "Subduing Seltas",
+			"rarity": "common",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Insect",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/34_Subduing Seltas.png"
+			}
+		},
+		{
+			"name": "Scavenging Wulg",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Badger Wolf",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/30_Scavenging Wulg.png"
+			}
+		},
+		{
+			"name": "Yian Kut-Ku",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Bird Drake",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/39_Yian Kut-Ku.png"
+			}
+		},
+		{
+			"name": "Ornery Rhenoplos",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Dinosaur",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/26_Ornery Rhenoplos.png"
+			}
+		},
+		{
+			"name": "Horned Kelbi",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Elk",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/19_Horned Kelbi.png"
+			}
+		},
+		{
+			"name": "Great Boar Bulldrome",
+			"rarity": "common",
+			"mana_cost": "{4}{W}",
+			"type": "Creature — Boar Beast",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/16_Great Boar Bulldrome.png"
+			}
+		},
+		{
+			"name": "Agile Velociprey",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Bird Lizard",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/1_Agile Velociprey.png"
+			}
+		},
+		{
+			"name": "Kulu-Ya-ku",
+			"rarity": "common",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Creature — Bird Wyvern",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/21_Kulu-Ya-ku.png"
+			}
+		},
+		{
+			"name": "Terrifying Izuchi",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Bird Lizard",
+			"collector_number": "151",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/151_Terrifying Izuchi.png"
+			}
+		},
+		{
+			"name": "Gorging Zamite",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Shark Lizard",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/135_Gorging Zamite.png"
+			}
+		},
+		{
+			"name": "Fire Pike Agnaktor",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Leviathan",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/130_Fire Pike Agnaktor.png"
+			}
+		},
+		{
+			"name": "Frenetic Bishaten",
+			"rarity": "common",
+			"mana_cost": "{4}{R}",
+			"type": "Creature — Bird Monkey Wyvern",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/134_Frenetic Bishaten.png"
+			}
+		},
+		{
+			"name": "Firespitting Rachnoid",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Spider",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/131_Firespitting Rachnoid.png"
+			}
+		},
+		{
+			"name": "Blightbreath Congalala",
+			"rarity": "common",
+			"mana_cost": "{3}{R}",
+			"type": "Creature — Ape Beast",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/123_Blightbreath Congalala.png"
+			}
+		},
+		{
+			"name": "Bloodlust Arzuros",
+			"rarity": "common",
+			"mana_cost": "{4}{R}",
+			"type": "Creature — Bear Beast",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/124_Bloodlust Arzuros.png"
+			}
+		},
+		{
+			"name": "Lava Beast Uroktor",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Creature — Salamander",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/139_Lava Beast Uroktor.png"
+			}
+		},
+		{
+			"name": "Flame Rake",
+			"rarity": "common",
+			"mana_cost": "{4}{R}",
+			"type": "Sorcery",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/133_Flame Rake.png"
+			}
+		},
+		{
+			"name": "Unchecked Flames",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Sorcery",
+			"collector_number": "152",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/152_Unchecked Flames.png"
+			}
+		},
+		{
+			"name": "Scaleblade Hail",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "145",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/145_Scaleblade Hail.png"
+			}
+		},
+		{
+			"name": "Apceros Herd",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Dinosaur",
+			"collector_number": "157",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/157_Apceros Herd.png"
+			}
+		},
+		{
+			"name": "Chief Gajalaka",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Cat Shaman",
+			"collector_number": "162",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/162_Chief Gajalaka.png"
+			}
+		},
+		{
+			"name": "Venomous Wroggi",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Frog Lizard",
+			"collector_number": "192",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/192_Venomous Wroggi.png"
+			}
+		},
+		{
+			"name": "Support Palamute",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Dog",
+			"collector_number": "187",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/187_Support Palamute.png"
+			}
+		},
+		{
+			"name": "Crying Neck Larinoth",
+			"rarity": "common",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Dinosaur",
+			"collector_number": "164",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/164_Crying Neck Larinoth.png"
+			}
+		},
+		{
+			"name": "Wasteland Warrior Barroth",
+			"rarity": "common",
+			"mana_cost": "{4}{G}",
+			"type": "Creature — Beast",
+			"collector_number": "194",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/194_Wasteland Warrior Barroth.png"
+			}
+		},
+		{
+			"name": "Gluttonous Pukei Pukei",
+			"rarity": "common",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Creature — Lizard Wyvern",
+			"collector_number": "168",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/168_Gluttonous Pukei Pukei.png"
+			}
+		},
+		{
+			"name": "Sand Fish Cephadrome",
+			"rarity": "common",
+			"mana_cost": "{5}{G}",
+			"type": "Creature — Fish",
+			"collector_number": "182",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/182_Sand Fish Cephadrome.png"
+			}
+		},
+		{
+			"name": "Breach The Vale",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "161",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/161_Breach The Vale.png"
+			}
+		},
+		{
+			"name": "Vigorwasp Spray",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "193",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/193_Vigorwasp Spray.png"
+			}
+		},
+		{
+			"name": "Crush Carapace",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "163",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/163_Crush Carapace.png"
+			}
+		},
+		{
+			"name": "Taunting Facade",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "188",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/188_Taunting Facade.png"
+			}
+		},
+		{
+			"name": "Blank Stare Khezu",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{U}",
+			"type": "Creature — Leech Drake",
+			"collector_number": "196",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/196_Blank Stare Khezu.png"
+			}
+		},
+		{
+			"name": "Thunderlord's Judgement",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "198",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/198_Thunderlord's Judgement.png"
+			}
+		},
+		{
+			"name": "Ice Armor Zamtrios",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Shark Drake",
+			"collector_number": "200",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/200_Ice Armor Zamtrios.png"
+			}
+		},
+		{
+			"name": "Tides of Battle",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Enchantment",
+			"collector_number": "201",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/201_Tides of Battle.png"
+			}
+		},
+		{
+			"name": "Volatile Presence",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "203",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/203_Volatile Presence.png"
+			}
+		},
+		{
+			"name": "World Eater Deviljho",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{R}",
+			"type": "Creature — Dragon Beast",
+			"collector_number": "204",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/204_World Eater Deviljho.png"
+			}
+		},
+		{
+			"name": "Death From Above",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Instant",
+			"collector_number": "205",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/205_Death From Above.png"
+			}
+		},
+		{
+			"name": "Rathalos, King of the Skies",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{G}",
+			"type": "Creature — Dragon",
+			"collector_number": "207",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/207_Rathalos, King of the Skies.png"
+			}
+		},
+		{
+			"name": "Great Jaggi",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{G}{W}",
+			"type": "Creature — Bird Wyvern",
+			"collector_number": "209",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/209_Great Jaggi.png"
+			}
+		},
+		{
+			"name": "Pack Empowerment",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{W}",
+			"type": "Sorcery",
+			"collector_number": "210",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/210_Pack Empowerment.png"
+			}
+		},
+		{
+			"name": "Bone Hammer Radobaan",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Creature — Skeleton Beast",
+			"collector_number": "211",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/211_Bone Hammer Radobaan.png"
+			}
+		},
+		{
+			"name": "Nakarkos' Blessing",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{B}",
+			"type": "Sorcery",
+			"collector_number": "212",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/212_Nakarkos' Blessing.png"
+			}
+		},
+		{
+			"name": "Colossal Garangolm",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{R}",
+			"type": "Creature — Giant Ape Beast",
+			"collector_number": "214",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/214_Colossal Garangolm.png"
+			}
+		},
+		{
+			"name": "Fists of Fire and Ice",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{R}",
+			"type": "Enchantment",
+			"collector_number": "216",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/216_Fists of Fire and Ice.png"
+			}
+		},
+		{
+			"name": "Flash of Surspikes",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{G}",
+			"type": "Instant",
+			"collector_number": "217",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/217_Flash of Surspikes.png"
+			}
+		},
+		{
+			"name": "Rathian, Queen of the Land",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{G}",
+			"type": "Creature — Dragon",
+			"collector_number": "218",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/218_Rathian, Queen of the Land.png"
+			}
+		},
+		{
+			"name": "Roaring Tigrex",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{R}{W}",
+			"type": "Creature — Dinosaur Wyvern",
+			"collector_number": "221",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/221_Roaring Tigrex.png"
+			}
+		},
+		{
+			"name": "Felyne Shield Spire",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact — Equipment",
+			"collector_number": "243",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/243_Felyne Shield Spire.png"
+			}
+		},
+		{
+			"name": "Ferocious Bull Banbaro",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Creature — Ox Beast",
+			"collector_number": "223",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/223_Ferocious Bull Banbaro.png"
+			}
+		},
+		{
+			"name": "Trigger Point",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{U}",
+			"type": "Instant",
+			"collector_number": "224",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/224_Trigger Point.png"
+			}
+		},
+		{
+			"name": "The Elder Crossing",
+			"rarity": "mythic",
+			"mana_cost": "{W}{U}{B}{R}{G}",
+			"type": "Legendary Enchantment — Saga",
+			"collector_number": "231",
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://jordibeari.github.io/sets/MHR-files/img/231_The Elder Crossing_back.png"
+				}
+			},
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/231_The Elder Crossing_front.png"
+			}
+		},
+		{
+			"name": "Ancestral Steppe",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "255",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/255_Ancestral Steppe.png"
+			}
+		},
+		{
+			"name": "Coral Highlands",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "259",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/259_Coral Highlands.png"
+			}
+		},
+		{
+			"name": "Flooded Forest",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "262",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/262_Flooded Forest.png"
+			}
+		},
+		{
+			"name": "Frost Islands",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "263",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/263_Frost Islands.png"
+			}
+		},
+		{
+			"name": "Frozen Seaway",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "264",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/264_Frozen Seaway.png"
+			}
+		},
+		{
+			"name": "Primal Forest",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "267",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/267_Primal Forest.png"
+			}
+		},
+		{
+			"name": "Rotten Vale",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "268",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/268_Rotten Vale.png"
+			}
+		},
+		{
+			"name": "Shrine Ruins",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "272",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/272_Shrine Ruins.png"
+			}
+		},
+		{
+			"name": "Verdant Hills",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "273",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/273_Verdant Hills.png"
+			}
+		},
+		{
+			"name": "Volcanic Hollow",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "274",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/274_Volcanic Hollow.png"
+			}
+		},
+		{
+			"name": "Elder's Recess",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "261",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/261_Elder's Recess.png"
+			}
+		},
+		{
+			"name": "Sacred Pinnacle",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "269",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/269_Sacred Pinnacle.png"
+			}
+		},
+		{
+			"name": "Ancient Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "256",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/256_Ancient Forest.png"
+			}
+		},
+		{
+			"name": "The Guiding Lands",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "265",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/265_The Guiding Lands.png"
+			}
+		},
+		{
+			"name": "Sandy Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "270",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/270_Sandy Plains.png"
+			}
+		},
+		{
+			"name": "Wildspire Wastes",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "275",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/275_Wildspire Wastes.png"
+			}
+		},
+		{
+			"name": "Wyvern's End",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "276",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/276_Wyvern's End.png"
+			}
+		},
+		{
+			"name": "Deserted Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "260",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/260_Deserted Island.png"
+			}
+		},
+		{
+			"name": "Castle Schrade",
+			"rarity": "mythic",
+			"mana_cost": "",
+			"type": "Legendary Land — Zone",
+			"collector_number": "257",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/257_Castle Schrade.png"
+			}
+		},
+		{
+			"name": "Origin Isle",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Zone",
+			"collector_number": "266",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/266_Origin Isle.png"
+			}
+		},
+		{
+			"name": "Seat of The Shah",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Legendary Land — Zone",
+			"collector_number": "271",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/271_Seat of The Shah.png"
+			}
+		},
+		{
+			"name": "The Citadel",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Legendary Land — Zone",
+			"collector_number": "258",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/258_The Citadel.png"
+			}
+		},
+		{
+			"name": "Blastblight",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Aura Blight",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/10_Blastblight.png"
+			}
+		},
+		{
+			"name": "Bloodblight",
+			"rarity": "mythic",
+			"mana_cost": "",
+			"type": "Token Enchantment — Aura Blight",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/1_Bloodblight.png"
+			}
+		},
+		{
+			"name": "Dragonblight",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Token Enchantment — Aura Blight",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/2_Dragonblight.png"
+			}
+		},
+		{
+			"name": "Fireblight",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Aura Blight",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/16_Fireblight.png"
+			}
+		},
+		{
+			"name": "Frenzy Virus",
+			"rarity": "mythic",
+			"mana_cost": "",
+			"type": "Token Enchantment — Aura Blight",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/3_Frenzy Virus.png"
+			}
+		},
+		{
+			"name": "Iceblight",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Aura Blight",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/9_Iceblight.png"
+			}
+		},
+		{
+			"name": "Thunderblight",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Aura Blight",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/6_Thunderblight.png"
+			}
+		},
+		{
+			"name": "Waterblight",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Aura Blight",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/22_Waterblight.png"
+			}
+		},
+		{
+			"name": "Blast Threat",
+			"rarity": "common",
+			"mana_cost": "{3}{R}",
+			"type": "Sorcery",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/121_Blast Threat.png"
+			}
+		},
+		{
+			"name": "Kappa Frog Tetranadon",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Frog Turtle Beast",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/54_Kappa Frog Tetranadon.png"
+			}
+		},
+		{
+			"name": "Great Jagras",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Giant Lizard",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/17_Great Jagras.png"
+			}
+		},
+		{
+			"name": "Feigning Gypceros",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature — Bird Drake",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/12_Feigning Gypceros.png"
+			}
+		},
+		{
+			"name": "Alpha Raptor Velocidrome",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{W}",
+			"type": "Creature — Bird Lizard",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/2_Alpha Raptor Velocidrome.png"
+			}
+		},
+		{
+			"name": "Ambush-Predator Plesioth",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Fish",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/4_Ambush-Predator Plesioth.png"
+			}
+		},
+		{
+			"name": "Twisted Scales Najarala",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Creature — Serpent",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/73_Twisted Scales Najarala.png"
+			}
+		},
+		{
+			"name": "Great Baggi",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Bird Lizard",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/51_Great Baggi.png"
+			}
+		},
+		{
+			"name": "Daimyo Hermitaur",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Crab Noble",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/125_Daimyo Hermitaur.png"
+			}
+		},
+		{
+			"name": "Thorny Venom Espinas",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{B}",
+			"type": "Creature — Plant Drake",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/113_Thorny Venom Espinas.png"
+			}
+		},
+		{
+			"name": "Lantern Fish Gobul",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Fish Wyvern",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/97_Lantern Fish Gobul.png"
+			}
+		},
+		{
+			"name": "Great Girros",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Salamander",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/93_Great Girros.png"
+			}
+		},
+		{
+			"name": "Final-Flash Shogun Ceanataur",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Crab Samurai",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/90_Final-Flash Shogun Ceanataur.png"
+			}
+		},
+		{
+			"name": "Horn Caller Quropeco",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{R}",
+			"type": "Creature — Bard Wyvern",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/138_Horn Caller Quropeco.png"
+			}
+		},
+		{
+			"name": "Great Izuchi",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Bird Lizard",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/136_Great Izuchi.png"
+			}
+		},
+		{
+			"name": "Desert Tyrant Diablos",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Creature — Devil Drake",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/126_Desert Tyrant Diablos.png"
+			}
+		},
+		{
+			"name": "Great Wroggi",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Bird Lizard",
+			"collector_number": "169",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/169_Great Wroggi.png"
+			}
+		},
+		{
+			"name": "One Horned Monoblos",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{G}",
+			"type": "Creature — Devil Drake",
+			"collector_number": "177",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/177_One Horned Monoblos.png"
+			}
+		},
+		{
+			"name": "Shadow Lurker Nerscylla",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Spider",
+			"collector_number": "183",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/183_Shadow Lurker Nerscylla.png"
+			}
+		},
+		{
+			"name": "Snow Oni Goss Harag",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Demon Beast",
+			"collector_number": "184",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/184_Snow Oni Goss Harag.png"
+			}
+		},
+		{
+			"name": "Moonlight Nocturne Lunagaron",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Werewolf Beast",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/58_Moonlight Nocturne Lunagaron.png"
+			}
+		},
+		{
+			"name": "The Inclemency",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Enchantment — Saga",
+			"collector_number": "171",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/171_The Inclemency.png"
+			}
+		},
+		{
+			"name": "The Affliction",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Enchantment — Saga",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/118_The Affliction.png"
+			}
+		},
+		{
+			"name": "Tidal Decree",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}",
+			"type": "Sorcery",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/72_Tidal Decree.png"
+			}
+		},
+		{
+			"name": "Royal Resurgence",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}",
+			"type": "Instant",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/28_Royal Resurgence.png"
+			}
+		},
+		{
+			"name": "Village Raid",
+			"rarity": "rare",
+			"mana_cost": "{X}{B}",
+			"type": "Sorcery",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/116_Village Raid.png"
+			}
+		},
+		{
+			"name": "Shagaru Magala",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{B}{R}{G}",
+			"type": "Legendary Creature — Elder Dragon God",
+			"collector_number": "238",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/238_Shagaru Magala.png"
+			}
+		},
+		{
+			"name": "Argent Comet Valstrax",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{R}{W}",
+			"type": "Creature — Dragon",
+			"collector_number": "226",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/226_Argent Comet Valstrax.png"
+			}
+		},
+		{
+			"name": "Flame King Teostra",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}",
+			"type": "Legendary Creature — Elder Dragon Cat",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/132_Flame King Teostra.png"
+			}
+		},
+		{
+			"name": "The Rampage",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Enchantment — Saga",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/27_The Rampage.png"
+			}
+		},
+		{
+			"name": "Glorious Kulve Taroth",
+			"rarity": "mythic",
+			"mana_cost": "{W}{U}{B}",
+			"type": "Legendary Creature — Goat Dragon",
+			"collector_number": "232",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/232_Glorious Kulve Taroth.png"
+			}
+		},
+		{
+			"name": "Narwa, the Allmother",
+			"rarity": "mythic",
+			"mana_cost": "{2}{G}{U}{R}",
+			"type": "Legendary Creature — Elder Serpent",
+			"collector_number": "236",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/236_Narwa, the Allmother.png"
+			}
+		},
+		{
+			"name": "Dragonator",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Artifact — Equipment",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/127_Dragonator.png"
+			}
+		},
+		{
+			"name": "Treasure",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Treasure",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/25_Treasure.png"
+			}
+		},
+		{
+			"name": "Elk",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Elk",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/19_Elk.png"
+			}
+		},
+		{
+			"name": "Lizard",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Lizard",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/5_Lizard.png"
+			}
+		},
+		{
+			"name": "Fish",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Fish",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/20_Fish.png"
+			}
+		},
+		{
+			"name": "Wolf",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Wolf",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/7_Wolf.png"
+			}
+		},
+		{
+			"name": "Insect",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Insect",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/11_Insect.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Forest",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/27_Forest.png"
+			}
+		},
+		{
+			"name": "Tentacle",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Tentacle",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/15_Tentacle.png"
+			}
+		},
+		{
+			"name": "Dinosaur",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Dinosaur",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/18_Dinosaur.png"
+			}
+		},
+		{
+			"name": "Leech",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Leech",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/12_Leech.png"
+			}
+		},
+		{
+			"name": "Shadow of The Shah",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Token Legendary Creature — Elder Snake",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/13_Shadow of The Shah.png"
+			}
+		},
+		{
+			"name": "Wall",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact Creature — Wall",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/26_Wall.png"
+			}
+		},
+		{
+			"name": "Clue",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Clue",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/24_Clue.png"
+			}
+		},
+		{
+			"name": "Wyvern",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Wyvern",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/23_Wyvern.png"
+			}
+		},
+		{
+			"name": "Stalking Girros",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Salamander",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/14_Stalking Girros.png"
+			}
+		},
+		{
+			"name": "Cowardly Jagras",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Lizard",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/4_Cowardly Jagras.png"
+			}
+		},
+		{
+			"name": "Terrifying Izuchi",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Bird Lizard",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/17_Terrifying Izuchi.png"
+			}
+		},
+		{
+			"name": "Venomous Wroggi",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Token Creature — Frog Lizard",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/21_Venomous Wroggi.png"
+			}
+		},
+		{
+			"name": "Cunning Baggi",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Token Creature — Bird Lizard",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/8_Cunning Baggi.png"
+			}
+		},
+	]
+
+[rare(1)]
+	2 Lord of Lightning Zinogre
+	2 Thousand Blade Seregios
+	2 Mist Phantom Chameleos
+	2 Scorching Blade Glavenus
+	2 Sapphire of the Emperor
+	2 Guardian Sanctum
+	2 Nocturnal Malfestio
+	2 Sterling Pride Kirin
+	2 Ibushi, Breath of Ire
+	2 Subzero Knight Barioth
+	2 Flame Queen Lunastra
+	2 The Tale of Ice and Fire
+	2 Lost in the Maze
+	2 Blackveil Vaal Hazak
+	2 Piercing Xu Wu
+	2 Hell-Brawler Brachydios
+	2 The Great Dragon War
+	2 Cold Front
+	2 Grievous Wound
+	2 Blazing Ajarakan
+	2 Hellflame Nu Udra
+	2 Lightning Revolt Astalos
+	2 Synthetic Aberration
+	2 Wreathed in Hellfire
+	2 Armored Gravios
+	2 Vaal Hazak
+	2 Fortress Shen Gaoren
+	2 Pavilion Empress Ahtal-Ka
+	2 Malice Tiger Magnamalo
+	2 Flush from the thicket
+	2 The Dragontorch
+	1 Amatsu, Heaven's Catastrophe
+	1 Shara Ishvalda, the Everwyrm
+	1 Shining Dragon Ceadeus
+	1 Ukanlos, Tyrant of Ice
+	1 Onyx Oblivion Gogmazios
+	1 Akantor, Tyrant of Fire
+	1 Zorah Magdoros
+	1 Archdemon Gaismagorm
+	1 Yama Tsukami
+	1 Lao-Shan Lung
+	2 Jin Dahaad, The Frozen Peak
+	2 Abyssal Namielle
+	2 Rock Bandit Dodogama
+	2 Dah'ren Mohran
+	2 Viper Tobi-Kadachi
+	2 Golden Mane Rajang
+	2 Malzeno, Scarlet Feast
+	2 Invading Tyrant Bazelgeuse
+	2 Kushala Daora
+	1 Alatreon, Brilliant Darkness
+	1 Arkveld, Ashen Blade Unearthed
+	1 Safi'Jiiva, Sapphire Emperor
+	1 Velkhana the Iceborne
+	1 The Black Flame, Fatalis
+	2 Ahtal Neset, Empress' Throne
+	1 Dire Miralis, the Calamity
+	1 Dalamadur, Shah Eternal
+	1 Zoh Shia, the White Seraph
+	2 Ear-Splitting Brute Tigrex
+	2 Nakarkos, Harbinger of Death
+	2 Dark Eclipse Gore Magala
+	2 Crested Torrent Uth Duna
+	2 Nergigante, the Extinction
+	1 The Elder Crossing
+	2 The Guiding Lands
+	1 Castle Schrade
+	2 Origin Isle
+	2 Seat of The Shah
+	2 The Citadel
+	2 The Inclemency
+	2 The Affliction
+	2 Tidal Decree
+	2 Royal Resurgence
+	2 Village Raid
+	1 Shagaru Magala
+	2 Argent Comet Valstrax
+	2 Flame King Teostra
+	2 The Rampage
+	1 Glorious Kulve Taroth
+	1 Narwa, the Allmother
+[uncommon(4)]
+	4 Crimson Cannonball Volvidon
+	4 Deep Snow Beotodus
+	4 Floating Sky Paolumu
+	4 Azure Lightning Lagiacrus
+	4 Wind Drifting Legiana
+	4 Soporific Siren Somnacanth
+	4 Backed By The Pack
+	4 Bewitching Mizutsune
+	4 Sparking Tobi-Kadachi
+	4 Wind Shear Hirabami
+	4 Mud Hermit Almudron
+	4 Violet Foresight
+	4 Crimson Ambush
+	4 Archdemon's Beckoning Call
+	4 Scoutfly Lantern
+	4 Cruel Claw Odogaron
+	4 Howling Yian Garuga
+	4 Seltas Queen
+	4 Swamp Spout Rompompolo
+	4 Emerge From Effluvia
+	4 Fatal Entry
+	4 Calm Before the Storm
+	4 Vile Dastardly Aknosom
+	4 Shining Thunder Rey Dau
+	4 Empress Rakna Kadaki
+	4 Savage Jaw Anjanath
+	4 Ebon Hellfire
+	4 Might of the Elements
+	4 Reckless Rage
+	4 Oni Frog Tetsucabra
+	4 Molten Lavasioth
+	4 Toxic Nebula Gigginox
+	4 Bellowing Boulder Basarios
+	4 Steady Mountain Gammoth
+	4 Territorial Dispute
+	4 Rising Threat
+	4 Shield Bug Konchu
+	4 Lightning Rod Ceratonoth
+	4 Sand Sea Balahara
+	4 Explosive Hammer Uragaan
+	4 Mantle in Gold
+	4 Underbrush Ambush
+	4 King's Verdict
+	4 Abyssal Strike
+	4 Qurio's Compulsion
+	4 Sleep
+	4 Steel Tempest
+	4 Unstable Temperament
+	4 Invasive Species
+	4 Witness the End
+	4 Predator's Domain
+	4 Pierce the Black Veil
+	4 Glare of the Everwyrm
+	4 Creeping Incubation
+	4 Grimalkyne Vine Trap
+	4 Gatling Gun
+	4 God Serpent Remains
+	4 Blank Stare Khezu
+	4 Thunderlord's Judgement
+	4 Ice Armor Zamtrios
+	4 Tides of Battle
+	4 Volatile Presence
+	4 World Eater Deviljho
+	4 Death From Above
+	4 Rathalos, King of the Skies
+	4 Great Jaggi
+	4 Pack Empowerment
+	4 Bone Hammer Radobaan
+	4 Nakarkos' Blessing
+	4 Colossal Garangolm
+	4 Fists of Fire and Ice
+	4 Flash of Surspikes
+	4 Rathian, Queen of the Land
+	4 Roaring Tigrex
+	4 Felyne Shield Spire
+	4 Ferocious Bull Banbaro
+	4 Trigger Point
+	4 Ancestral Steppe
+	4 Coral Highlands
+	4 Flooded Forest
+	4 Frost Islands
+	4 Frozen Seaway
+	4 Primal Forest
+	4 Rotten Vale
+	4 Shrine Ruins
+	4 Verdant Hills
+	4 Volcanic Hollow
+	4 Elder's Recess
+	4 Great Jagras
+	4 Feigning Gypceros
+	4 Alpha Raptor Velocidrome
+	4 Ambush-Predator Plesioth
+	4 Twisted Scales Najarala
+	4 Great Baggi
+	4 Daimyo Hermitaur
+	4 Thorny Venom Espinas
+	4 Lantern Fish Gobul
+	4 Great Girros
+	4 Final-Flash Shogun Ceanataur
+	4 Horn Caller Quropeco
+	4 Great Izuchi
+	4 Desert Tyrant Diablos
+	4 Great Wroggi
+	4 One Horned Monoblos
+	4 Shadow Lurker Nerscylla
+	4 Snow Oni Goss Harag
+	4 Moonlight Nocturne Lunagaron
+	4 Dragonator
+[common(7)]
+	8 Flame-Tail Quematrice
+	8 Curious Nulberry
+	8 Binding Chatacabra
+	8 Survival of the Biggest
+	8 Scarlet Rose Lala Barina
+	8 Scavenger Ambush
+	8 Shell Smash
+	8 Pioneer Doshaguma
+	8 Hurt From The Dirt
+	8 Red Glare Nargacuga
+	8 Truffle Hunter Mosswine
+	8 Boaboa Clan
+	8 Wading Slagtoth
+	8 Forlorn Camp
+	8 Pitfall Trap
+	8 Felyne Explorer's Goggles
+	8 Flame Barrel Bomb
+	8 Vanishing Mists
+	8 Coralhorn Orchestra
+	8 Cunning Baggi
+	8 Miasmal Hypnocatrice
+	8 Silver Slider Lagombi
+	8 Elusive Bnahabra
+	8 Kecha Wacha
+	8 Royal Ludroth
+	8 Tzitzi-Ya-Ku
+	8 Longclaw Boggi
+	8 Hypnotic Wingbeat
+	8 Wind Pressure
+	8 Blight Bolt
+	8 Devour Body and Mind
+	8 Aurortle's Moxie
+	8 Rearing Thunderbolt
+	8 Stalking Girros
+	8 Melynx Shadowpaw
+	8 Rimebreath Blangonga
+	8 Feasting Ceanataur
+	8 Vespoid Queen
+	8 Tail Hammer Duramboros
+	8 Latent Mouth Nibelsnarf
+	8 Sinister Shadow Jyuratodos
+	8 Strike Down
+	8 Desperate Hunger
+	8 Death Defies Death
+	8 Afflicted Appetite
+	8 Wade Through Bones
+	8 Opportunistic Remobra
+	8 Cowardly Jagras
+	8 Subduing Seltas
+	8 Scavenging Wulg
+	8 Yian Kut-Ku
+	8 Ornery Rhenoplos
+	8 Horned Kelbi
+	8 Great Boar Bulldrome
+	8 Agile Velociprey
+	8 Kulu-Ya-ku
+	8 Terrifying Izuchi
+	8 Gorging Zamite
+	8 Fire Pike Agnaktor
+	8 Frenetic Bishaten
+	8 Firespitting Rachnoid
+	8 Blightbreath Congalala
+	8 Bloodlust Arzuros
+	8 Lava Beast Uroktor
+	8 Flame Rake
+	8 Unchecked Flames
+	8 Scaleblade Hail
+	8 Apceros Herd
+	8 Chief Gajalaka
+	8 Venomous Wroggi
+	8 Support Palamute
+	8 Crying Neck Larinoth
+	8 Wasteland Warrior Barroth
+	8 Gluttonous Pukei Pukei
+	8 Sand Fish Cephadrome
+	8 Breach The Vale
+	8 Vigorwasp Spray
+	8 Crush Carapace
+	8 Taunting Facade
+	8 Sacred Pinnacle
+	8 Ancient Forest
+	8 Sandy Plains
+	8 Wildspire Wastes
+	8 Wyvern's End
+	8 Deserted Island
+	8 Blast Threat
+	8 Kappa Frog Tetranadon
+[wildcard(2)]
+	6 Flame-Tail Quematrice
+	6 Curious Nulberry
+	6 Binding Chatacabra
+	6 Survival of the Biggest
+	6 Scarlet Rose Lala Barina
+	6 Scavenger Ambush
+	6 Shell Smash
+	6 Pioneer Doshaguma
+	6 Hurt From The Dirt
+	15 Crimson Cannonball Volvidon
+	15 Deep Snow Beotodus
+	15 Floating Sky Paolumu
+	15 Azure Lightning Lagiacrus
+	15 Wind Drifting Legiana
+	15 Soporific Siren Somnacanth
+	15 Backed By The Pack
+	15 Bewitching Mizutsune
+	15 Sparking Tobi-Kadachi
+	15 Wind Shear Hirabami
+	15 Mud Hermit Almudron
+	15 Violet Foresight
+	15 Crimson Ambush
+	15 Archdemon's Beckoning Call
+	15 Scoutfly Lantern
+	15 Cruel Claw Odogaron
+	15 Howling Yian Garuga
+	15 Seltas Queen
+	15 Swamp Spout Rompompolo
+	15 Emerge From Effluvia
+	15 Fatal Entry
+	15 Calm Before the Storm
+	15 Vile Dastardly Aknosom
+	15 Shining Thunder Rey Dau
+	15 Empress Rakna Kadaki
+	15 Savage Jaw Anjanath
+	15 Ebon Hellfire
+	15 Might of the Elements
+	15 Reckless Rage
+	15 Oni Frog Tetsucabra
+	15 Molten Lavasioth
+	15 Toxic Nebula Gigginox
+	15 Bellowing Boulder Basarios
+	15 Steady Mountain Gammoth
+	15 Territorial Dispute
+	15 Rising Threat
+	7 Lord of Lightning Zinogre
+	7 Thousand Blade Seregios
+	7 Mist Phantom Chameleos
+	7 Scorching Blade Glavenus
+	7 Sapphire of the Emperor
+	7 Guardian Sanctum
+	7 Nocturnal Malfestio
+	7 Sterling Pride Kirin
+	7 Ibushi, Breath of Ire
+	7 Subzero Knight Barioth
+	7 Flame Queen Lunastra
+	7 The Tale of Ice and Fire
+	7 Lost in the Maze
+	7 Blackveil Vaal Hazak
+	7 Piercing Xu Wu
+	6 Red Glare Nargacuga
+	7 Hell-Brawler Brachydios
+	7 The Great Dragon War
+	7 Cold Front
+	7 Grievous Wound
+	7 Blazing Ajarakan
+	7 Hellflame Nu Udra
+	7 Lightning Revolt Astalos
+	7 Synthetic Aberration
+	7 Wreathed in Hellfire
+	7 Armored Gravios
+	7 Vaal Hazak
+	7 Fortress Shen Gaoren
+	7 Pavilion Empress Ahtal-Ka
+	7 Malice Tiger Magnamalo
+	7 Flush from the thicket
+	7 The Dragontorch
+	4 Amatsu, Heaven's Catastrophe
+	4 Shara Ishvalda, the Everwyrm
+	4 Shining Dragon Ceadeus
+	4 Ukanlos, Tyrant of Ice
+	4 Onyx Oblivion Gogmazios
+	4 Akantor, Tyrant of Fire
+	4 Zorah Magdoros
+	4 Archdemon Gaismagorm
+	4 Yama Tsukami
+	4 Lao-Shan Lung
+	7 Jin Dahaad, The Frozen Peak
+	7 Abyssal Namielle
+	7 Rock Bandit Dodogama
+	7 Dah'ren Mohran
+	7 Viper Tobi-Kadachi
+	7 Golden Mane Rajang
+	6 Truffle Hunter Mosswine
+	6 Boaboa Clan
+	6 Wading Slagtoth
+	6 Forlorn Camp
+	15 Shield Bug Konchu
+	15 Lightning Rod Ceratonoth
+	15 Sand Sea Balahara
+	15 Explosive Hammer Uragaan
+	7 Malzeno, Scarlet Feast
+	7 Invading Tyrant Bazelgeuse
+	7 Kushala Daora
+	4 Alatreon, Brilliant Darkness
+	4 Arkveld, Ashen Blade Unearthed
+	4 Safi'Jiiva, Sapphire Emperor
+	4 Velkhana the Iceborne
+	4 The Black Flame, Fatalis
+	15 Mantle in Gold
+	15 Underbrush Ambush
+	15 King's Verdict
+	15 Abyssal Strike
+	15 Qurio's Compulsion
+	15 Sleep
+	15 Steel Tempest
+	15 Unstable Temperament
+	15 Invasive Species
+	15 Witness the End
+	15 Predator's Domain
+	7 Ahtal Neset, Empress' Throne
+	15 Pierce the Black Veil
+	15 Glare of the Everwyrm
+	15 Creeping Incubation
+	6 Pitfall Trap
+	6 Felyne Explorer's Goggles
+	15 Grimalkyne Vine Trap
+	15 Gatling Gun
+	15 God Serpent Remains
+	4 Dire Miralis, the Calamity
+	4 Dalamadur, Shah Eternal
+	4 Zoh Shia, the White Seraph
+	7 Ear-Splitting Brute Tigrex
+	7 Nakarkos, Harbinger of Death
+	7 Dark Eclipse Gore Magala
+	7 Crested Torrent Uth Duna
+	6 Flame Barrel Bomb
+	6 Vanishing Mists
+	6 Coralhorn Orchestra
+	6 Cunning Baggi
+	6 Miasmal Hypnocatrice
+	6 Silver Slider Lagombi
+	6 Elusive Bnahabra
+	6 Kecha Wacha
+	6 Royal Ludroth
+	6 Tzitzi-Ya-Ku
+	6 Longclaw Boggi
+	6 Hypnotic Wingbeat
+	6 Wind Pressure
+	6 Blight Bolt
+	6 Devour Body and Mind
+	6 Aurortle's Moxie
+	6 Rearing Thunderbolt
+	6 Stalking Girros
+	6 Melynx Shadowpaw
+	6 Rimebreath Blangonga
+	6 Feasting Ceanataur
+	6 Vespoid Queen
+	7 Nergigante, the Extinction
+	6 Tail Hammer Duramboros
+	6 Latent Mouth Nibelsnarf
+	6 Sinister Shadow Jyuratodos
+	6 Strike Down
+	6 Desperate Hunger
+	6 Death Defies Death
+	6 Afflicted Appetite
+	6 Wade Through Bones
+	6 Opportunistic Remobra
+	6 Cowardly Jagras
+	6 Subduing Seltas
+	6 Scavenging Wulg
+	6 Yian Kut-Ku
+	6 Ornery Rhenoplos
+	6 Horned Kelbi
+	6 Great Boar Bulldrome
+	6 Agile Velociprey
+	6 Kulu-Ya-ku
+	6 Terrifying Izuchi
+	6 Gorging Zamite
+	6 Fire Pike Agnaktor
+	6 Frenetic Bishaten
+	6 Firespitting Rachnoid
+	6 Blightbreath Congalala
+	6 Bloodlust Arzuros
+	6 Lava Beast Uroktor
+	6 Flame Rake
+	6 Unchecked Flames
+	6 Scaleblade Hail
+	6 Apceros Herd
+	6 Chief Gajalaka
+	6 Venomous Wroggi
+	6 Support Palamute
+	6 Crying Neck Larinoth
+	6 Wasteland Warrior Barroth
+	6 Gluttonous Pukei Pukei
+	6 Sand Fish Cephadrome
+	6 Breach The Vale
+	6 Vigorwasp Spray
+	6 Crush Carapace
+	6 Taunting Facade
+	15 Blank Stare Khezu
+	15 Thunderlord's Judgement
+	15 Ice Armor Zamtrios
+	15 Tides of Battle
+	15 Volatile Presence
+	15 World Eater Deviljho
+	15 Death From Above
+	15 Rathalos, King of the Skies
+	15 Great Jaggi
+	15 Pack Empowerment
+	15 Bone Hammer Radobaan
+	15 Nakarkos' Blessing
+	15 Colossal Garangolm
+	15 Fists of Fire and Ice
+	15 Flash of Surspikes
+	15 Rathian, Queen of the Land
+	15 Roaring Tigrex
+	15 Felyne Shield Spire
+	15 Ferocious Bull Banbaro
+	15 Trigger Point
+	4 The Elder Crossing
+	15 Ancestral Steppe
+	15 Coral Highlands
+	15 Flooded Forest
+	15 Frost Islands
+	15 Frozen Seaway
+	15 Primal Forest
+	15 Rotten Vale
+	15 Shrine Ruins
+	15 Verdant Hills
+	15 Volcanic Hollow
+	15 Elder's Recess
+	6 Sacred Pinnacle
+	6 Ancient Forest
+	7 The Guiding Lands
+	6 Sandy Plains
+	6 Wildspire Wastes
+	6 Wyvern's End
+	6 Deserted Island
+	4 Castle Schrade
+	7 Origin Isle
+	7 Seat of The Shah
+	7 The Citadel
+	6 Blast Threat
+	6 Kappa Frog Tetranadon
+	15 Great Jagras
+	15 Feigning Gypceros
+	15 Alpha Raptor Velocidrome
+	15 Ambush-Predator Plesioth
+	15 Twisted Scales Najarala
+	15 Great Baggi
+	15 Daimyo Hermitaur
+	15 Thorny Venom Espinas
+	15 Lantern Fish Gobul
+	15 Great Girros
+	15 Final-Flash Shogun Ceanataur
+	15 Horn Caller Quropeco
+	15 Great Izuchi
+	15 Desert Tyrant Diablos
+	15 Great Wroggi
+	15 One Horned Monoblos
+	15 Shadow Lurker Nerscylla
+	15 Snow Oni Goss Harag
+	15 Moonlight Nocturne Lunagaron
+	7 The Inclemency
+	7 The Affliction
+	7 Tidal Decree
+	7 Royal Resurgence
+	7 Village Raid
+	4 Shagaru Magala
+	7 Argent Comet Valstrax
+	7 Flame King Teostra
+	7 The Rampage
+	4 Glorious Kulve Taroth
+	4 Narwa, the Allmother
+	15 Dragonator

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="/sets/MHR-files/icon.png"/>
+	<link rel="stylesheet" href="/resources/header.css">
+	<title>MHR visual preview</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			overscroll-behavior: none;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.main-content {
+			position: relative;
+			width: 100%;
+			float: left;
+			z-index: 2;
+			justify-items: center;
+		}
+		.sidebar {
+			position: sticky;
+			top: 0;
+			display: none;
+			text-align: center;
+			padding-right: 3%;
+			z-index: 1;
+			justify-items: center;
+		}
+		.sidebar-container {
+			width: 80%;
+			max-width: 375px;
+			position: relative;
+		}
+		.sidebar-h-img {
+			display: none;
+			transform: rotate(90deg);
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			width: 85%;
+		}
+		.sidebar-img {
+			vertical-align: middle;
+			width: 100%;
+		}
+		.close-btn {
+			background: url('/img/close.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 10%;
+			height: 10%;
+			border: none;
+			cursor: pointer;
+			position: absolute;
+			right: 4%;
+		}
+		.close-btn:hover {
+			background: url('/img/close-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 2px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-bottom: 1%;
+			justify-items: center;
+			max-width: 1200px;
+		}
+		.grid-container img {
+			width: 100%;
+			height: auto;
+			display: block;
+			visibility: hidden;
+			cursor: pointer;
+		}
+		.banner {
+			width: 100%;
+			height: auto;
+			padding-top: 20px;
+			padding-bottom: 50px;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+			max-width: 30%;
+			max-height: 320px;
+		}
+		.container {
+			position: relative;
+			width: 100%;
+		}
+		.container img {
+			width: 100%;
+			height: auto;
+		}
+		.flip-btn {
+			background: url('/img/flip.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 15%;
+			height: 11%;
+			cursor: pointer;
+			border: none;
+			position: absolute;
+			left: 50%;
+			top: 48%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+		}
+		.flip-btn:hover {
+			background: url('/img/flip-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.icon-bar {
+			display: grid;
+			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
+			gap: 1px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-top: 2%;
+			padding-bottom: 1%;
+			justify-items: center;
+			align-items: center;
+		}
+		.icon-bar .icon img {
+			width: 90%;
+			max-width: 80px;
+			height: auto;
+			display: block;
+			padding: 5%;
+			margin: auto;
+			text-align: center;
+		}
+		.icon-bar .dot img {
+			width: 50%;
+			max-width: 65px;
+			height: auto;
+			display: block;
+			margin: auto;
+			text-align: center;
+		}
+		.preload-hidden {
+			display: none;
+		}
+		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
+		.footer {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<img class="preload-hidden" src="/img/dot.png" />
+	<img class="preload-hidden" src="/sets/MHR-files/logo.png" />
+	<img class="preload-hidden" src="/sets/MHR-files/icon.png" />
+		<div class="header">
+		<div class="search-grid">
+			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
+			<img class="sg-icon" src="/img/search.png">
+			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
+			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
+		</div>
+	</div>
+
+	<div class="icon-bar">
+			<div class="icon"><a href="MHR"><img src="/sets/MHR-files/icon.png"></img></a></div>
+
+		</div>
+		<div class="banner">
+		<img class="logo" src="/sets/MHR-files/logo.png">
+		</div>
+		<div class="main-content" id="main-content">
+			<div class="grid-container">
+				<div class="container"><img alt="/sets\MHR-files\img\3_Amatsu, Heaven's Catastrophe.png" id="3_Amatsu, Heavens Catastrophe" data-flag="@X" onclick="openSidebar('3_Amatsu, Heavens Catastrophe',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\65_Shining Dragon Ceadeus.png" id="65_Shining Dragon Ceadeus" data-flag="@X" onclick="openSidebar('65_Shining Dragon Ceadeus',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\80_Archdemon Gaismagorm.png" id="80_Archdemon Gaismagorm" data-flag="@X" onclick="openSidebar('80_Archdemon Gaismagorm',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\120_Akantor, Tyrant of Fire.png" id="120_Akantor, Tyrant of Fire" data-flag="@X" onclick="openSidebar('120_Akantor, Tyrant of Fire',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\174_Lao-Shan Lung.png" id="174_Lao-Shan Lung" data-flag="@X" onclick="openSidebar('174_Lao-Shan Lung',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\32_Shara Ishvalda, the Everwyrm.png" id="32_Shara Ishvalda, the Everwyrm" data-flag="@X" onclick="openSidebar('32_Shara Ishvalda, the Everwyrm',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\75_Ukanlos, Tyrant of Ice.png" id="75_Ukanlos, Tyrant of Ice" data-flag="@X" onclick="openSidebar('75_Ukanlos, Tyrant of Ice',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\101_Onyx Oblivion Gogmazios.png" id="101_Onyx Oblivion Gogmazios" data-flag="@X" onclick="openSidebar('101_Onyx Oblivion Gogmazios',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\156_Zorah Magdoros.png" id="156_Zorah Magdoros" data-flag="@X" onclick="openSidebar('156_Zorah Magdoros',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\195_Yama Tsukami.png" id="195_Yama Tsukami" data-flag="@X" onclick="openSidebar('195_Yama Tsukami',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\18_Guardian Sanctum.png" id="18_Guardian Sanctum" data-flag="@X" onclick="openSidebar('18_Guardian Sanctum',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\50_Flame Queen Lunastra.png" id="50_Flame Queen Lunastra" data-flag="@X" onclick="openSidebar('50_Flame Queen Lunastra',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\82_Cold Front.png" id="82_Cold Front" data-flag="@X" onclick="openSidebar('82_Cold Front',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\118_The Affliction.png" id="118_The Affliction" data-flag="@N" onclick="openSidebar('118_The Affliction',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\158_Armored Gravios.png" id="158_Armored Gravios" data-flag="@X" onclick="openSidebar('158_Armored Gravios',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\22_Lord of Lightning Zinogre.png" id="22_Lord of Lightning Zinogre" data-flag="@X" onclick="openSidebar('22_Lord of Lightning Zinogre',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\53_Ibushi, Breath of Ire.png" id="53_Ibushi, Breath of Ire" data-flag="@X" onclick="openSidebar('53_Ibushi, Breath of Ire',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\92_The Great Dragon War.png" id="92_The Great Dragon War" data-flag="@X" onclick="openSidebar('92_The Great Dragon War',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\119_Ahtal Neset, Empress' Throne.png" id="119_Ahtal Neset, Empress Throne" data-flag="@X" onclick="openSidebar('119_Ahtal Neset, Empress Throne',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\160_Blackveil Vaal Hazak.png" id="160_Blackveil Vaal Hazak" data-flag="@X" onclick="openSidebar('160_Blackveil Vaal Hazak',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\24_Mist Phantom Chameleos.png" id="24_Mist Phantom Chameleos" data-flag="@X" onclick="openSidebar('24_Mist Phantom Chameleos',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\56_Lost in the Maze.png" id="56_Lost in the Maze" data-flag="@X" onclick="openSidebar('56_Lost in the Maze',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\94_Grievous Wound.png" id="94_Grievous Wound" data-flag="@X" onclick="openSidebar('94_Grievous Wound',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\122_Blazing Ajarakan.png" id="122_Blazing Ajarakan" data-flag="@X" onclick="openSidebar('122_Blazing Ajarakan',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\165_The Dragontorch.png" id="165_The Dragontorch" data-flag="@X" onclick="openSidebar('165_The Dragontorch',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\27_The Rampage.png" id="27_The Rampage" data-flag="@N" onclick="openSidebar('27_The Rampage',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\60_Nocturnal Malfestio.png" id="60_Nocturnal Malfestio" data-flag="@X" onclick="openSidebar('60_Nocturnal Malfestio',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\95_Hell-Brawler Brachydios.png" id="95_Hell-Brawler Brachydios" data-flag="@X" onclick="openSidebar('95_Hell-Brawler Brachydios',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\132_Flame King Teostra.png" id="132_Flame King Teostra" data-flag="@N" onclick="openSidebar('132_Flame King Teostra',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\166_Flush from the thicket.png" id="166_Flush from the thicket" data-flag="@X" onclick="openSidebar('166_Flush from the thicket',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\28_Royal Resurgence.png" id="28_Royal Resurgence" data-flag="@N" onclick="openSidebar('28_Royal Resurgence',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\69_Sterling Pride Kirin.png" id="69_Sterling Pride Kirin" data-flag="@X" onclick="openSidebar('69_Sterling Pride Kirin',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\100_Nergigante, the Extinction.png" id="100_Nergigante, the Extinction" data-flag="@X" onclick="openSidebar('100_Nergigante, the Extinction',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\137_Hellflame Nu Udra.png" id="137_Hellflame Nu Udra" data-flag="@X" onclick="openSidebar('137_Hellflame Nu Udra',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\167_Fortress Shen Gaoren.png" id="167_Fortress Shen Gaoren" data-flag="@X" onclick="openSidebar('167_Fortress Shen Gaoren',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\29_Sapphire of the Emperor.png" id="29_Sapphire of the Emperor" data-flag="@X" onclick="openSidebar('29_Sapphire of the Emperor',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\70_Subzero Knight Barioth.png" id="70_Subzero Knight Barioth" data-flag="@X" onclick="openSidebar('70_Subzero Knight Barioth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\103_Piercing Xu Wu.png" id="103_Piercing Xu Wu" data-flag="@X" onclick="openSidebar('103_Piercing Xu Wu',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\140_Lightning Revolt Astalos.png" id="140_Lightning Revolt Astalos" data-flag="@X" onclick="openSidebar('140_Lightning Revolt Astalos',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\171_The Inclemency.png" id="171_The Inclemency" data-flag="@N" onclick="openSidebar('171_The Inclemency',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\31_Scorching Blade Glavenus.png" id="31_Scorching Blade Glavenus" data-flag="@X" onclick="openSidebar('31_Scorching Blade Glavenus',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\71_The Tale of Ice and Fire.png" id="71_The Tale of Ice and Fire" data-flag="@X" onclick="openSidebar('71_The Tale of Ice and Fire',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\114_Vaal Hazak.png" id="114_Vaal Hazak" data-flag="@X" onclick="openSidebar('114_Vaal Hazak',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\150_Synthetic Aberration.png" id="150_Synthetic Aberration" data-flag="@X" onclick="openSidebar('150_Synthetic Aberration',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\175_Malice Tiger Magnamalo.png" id="175_Malice Tiger Magnamalo" data-flag="@X" onclick="openSidebar('175_Malice Tiger Magnamalo',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\35_Thousand Blade Seregios.png" id="35_Thousand Blade Seregios" data-flag="@X" onclick="openSidebar('35_Thousand Blade Seregios',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\72_Tidal Decree.png" id="72_Tidal Decree" data-flag="@N" onclick="openSidebar('72_Tidal Decree',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\116_Village Raid.png" id="116_Village Raid" data-flag="@N" onclick="openSidebar('116_Village Raid',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\155_Wreathed in Hellfire.png" id="155_Wreathed in Hellfire" data-flag="@X" onclick="openSidebar('155_Wreathed in Hellfire',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\179_Pavilion Empress Ahtal-Ka.png" id="179_Pavilion Empress Ahtal-Ka" data-flag="@X" onclick="openSidebar('179_Pavilion Empress Ahtal-Ka',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\2_Alpha Raptor Velocidrome.png" id="2_Alpha Raptor Velocidrome" data-flag="@X" onclick="openSidebar('2_Alpha Raptor Velocidrome',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\40_Abyssal Strike.png" id="40_Abyssal Strike" data-flag="@X" onclick="openSidebar('40_Abyssal Strike',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\81_Calm Before the Storm.png" id="81_Calm Before the Storm" data-flag="@X" onclick="openSidebar('81_Calm Before the Storm',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\125_Daimyo Hermitaur.png" id="125_Daimyo Hermitaur" data-flag="@X" onclick="openSidebar('125_Daimyo Hermitaur',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\159_Bellowing Boulder Basarios.png" id="159_Bellowing Boulder Basarios" data-flag="@X" onclick="openSidebar('159_Bellowing Boulder Basarios',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\4_Ambush-Predator Plesioth.png" id="4_Ambush-Predator Plesioth" data-flag="@X" onclick="openSidebar('4_Ambush-Predator Plesioth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\41_Archdemon's Beckoning Call.png" id="41_Archdemons Beckoning Call" data-flag="@X" onclick="openSidebar('41_Archdemons Beckoning Call',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\83_Creeping Incubation.png" id="83_Creeping Incubation" data-flag="@X" onclick="openSidebar('83_Creeping Incubation',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\126_Desert Tyrant Diablos.png" id="126_Desert Tyrant Diablos" data-flag="@N" onclick="openSidebar('126_Desert Tyrant Diablos',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\169_Great Wroggi.png" id="169_Great Wroggi" data-flag="@N" onclick="openSidebar('169_Great Wroggi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\5_Azure Lightning Lagiacrus.png" id="5_Azure Lightning Lagiacrus" data-flag="@X" onclick="openSidebar('5_Azure Lightning Lagiacrus',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\43_Bewitching Mizutsune.png" id="43_Bewitching Mizutsune" data-flag="@X" onclick="openSidebar('43_Bewitching Mizutsune',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\84_Cruel Claw Odogaron.png" id="84_Cruel Claw Odogaron" data-flag="@X" onclick="openSidebar('84_Cruel Claw Odogaron',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\127_Dragonator.png" id="127_Dragonator" data-flag="@N" onclick="openSidebar('127_Dragonator',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\172_Invasive Species.png" id="172_Invasive Species" data-flag="@X" onclick="openSidebar('172_Invasive Species',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\6_Backed By The Pack.png" id="6_Backed By The Pack" data-flag="@X" onclick="openSidebar('6_Backed By The Pack',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\46_Crimson Ambush.png" id="46_Crimson Ambush" data-flag="@X" onclick="openSidebar('46_Crimson Ambush',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\87_Emerge From Effluvia.png" id="87_Emerge From Effluvia" data-flag="@X" onclick="openSidebar('87_Emerge From Effluvia',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\128_Ebon Hellfire.png" id="128_Ebon Hellfire" data-flag="@X" onclick="openSidebar('128_Ebon Hellfire',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\176_Molten Lavasioth.png" id="176_Molten Lavasioth" data-flag="@X" onclick="openSidebar('176_Molten Lavasioth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\9_Crimson Cannonball Volvidon.png" id="9_Crimson Cannonball Volvidon" data-flag="@X" onclick="openSidebar('9_Crimson Cannonball Volvidon',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\51_Great Baggi.png" id="51_Great Baggi" data-flag="@X" onclick="openSidebar('51_Great Baggi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\88_Fatal Entry.png" id="88_Fatal Entry" data-flag="@X" onclick="openSidebar('88_Fatal Entry',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\129_Empress Rakna Kadaki.png" id="129_Empress Rakna Kadaki" data-flag="@X" onclick="openSidebar('129_Empress Rakna Kadaki',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\177_One Horned Monoblos.png" id="177_One Horned Monoblos" data-flag="@N" onclick="openSidebar('177_One Horned Monoblos',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\11_Deep Snow Beotodus.png" id="11_Deep Snow Beotodus" data-flag="@X" onclick="openSidebar('11_Deep Snow Beotodus',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\58_Moonlight Nocturne Lunagaron.png" id="58_Moonlight Nocturne Lunagaron" data-flag="@N" onclick="openSidebar('58_Moonlight Nocturne Lunagaron',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\90_Final-Flash Shogun Ceanataur.png" id="90_Final-Flash Shogun Ceanataur" data-flag="@X" onclick="openSidebar('90_Final-Flash Shogun Ceanataur',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\136_Great Izuchi.png" id="136_Great Izuchi" data-flag="@N" onclick="openSidebar('136_Great Izuchi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\178_Oni Frog Tetsucabra.png" id="178_Oni Frog Tetsucabra" data-flag="@X" onclick="openSidebar('178_Oni Frog Tetsucabra',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\12_Feigning Gypceros.png" id="12_Feigning Gypceros" data-flag="@X" onclick="openSidebar('12_Feigning Gypceros',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\59_Mud Hermit Almudron.png" id="59_Mud Hermit Almudron" data-flag="@X" onclick="openSidebar('59_Mud Hermit Almudron',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\91_Glare of the Everwyrm.png" id="91_Glare of the Everwyrm" data-flag="@X" onclick="openSidebar('91_Glare of the Everwyrm',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\138_Horn Caller Quropeco.png" id="138_Horn Caller Quropeco" data-flag="@N" onclick="openSidebar('138_Horn Caller Quropeco',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\181_Rising Threat.png" id="181_Rising Threat" data-flag="@X" onclick="openSidebar('181_Rising Threat',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\15_Floating Sky Paolumu.png" id="15_Floating Sky Paolumu" data-flag="@X" onclick="openSidebar('15_Floating Sky Paolumu',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\61_Qurio's Compulsion.png" id="61_Qurios Compulsion" data-flag="@X" onclick="openSidebar('61_Qurios Compulsion',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\93_Great Girros.png" id="93_Great Girros" data-flag="@X" onclick="openSidebar('93_Great Girros',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\141_Might of the Elements.png" id="141_Might of the Elements" data-flag="@X" onclick="openSidebar('141_Might of the Elements',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\183_Shadow Lurker Nerscylla.png" id="183_Shadow Lurker Nerscylla" data-flag="@N" onclick="openSidebar('183_Shadow Lurker Nerscylla',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\17_Great Jagras.png" id="17_Great Jagras" data-flag="@X" onclick="openSidebar('17_Great Jagras',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\64_Scoutfly Lantern.png" id="64_Scoutfly Lantern" data-flag="@X" onclick="openSidebar('64_Scoutfly Lantern',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\96_Howling Yian Garuga.png" id="96_Howling Yian Garuga" data-flag="@X" onclick="openSidebar('96_Howling Yian Garuga',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\142_Predator's Domain.png" id="142_Predators Domain" data-flag="@X" onclick="openSidebar('142_Predators Domain',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\184_Snow Oni Goss Harag.png" id="184_Snow Oni Goss Harag" data-flag="@N" onclick="openSidebar('184_Snow Oni Goss Harag',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\20_King's Verdict.png" id="20_Kings Verdict" data-flag="@X" onclick="openSidebar('20_Kings Verdict',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\67_Sleep.png" id="67_Sleep" data-flag="@X" onclick="openSidebar('67_Sleep',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\97_Lantern Fish Gobul.png" id="97_Lantern Fish Gobul" data-flag="@X" onclick="openSidebar('97_Lantern Fish Gobul',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\143_Reckless Rage.png" id="143_Reckless Rage" data-flag="@X" onclick="openSidebar('143_Reckless Rage',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\185_Steady Mountain Gammoth.png" id="185_Steady Mountain Gammoth" data-flag="@X" onclick="openSidebar('185_Steady Mountain Gammoth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\23_Mantle in Gold.png" id="23_Mantle in Gold" data-flag="@X" onclick="openSidebar('23_Mantle in Gold',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\68_Sparking Tobi-Kadachi.png" id="68_Sparking Tobi-Kadachi" data-flag="@X" onclick="openSidebar('68_Sparking Tobi-Kadachi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\102_Pierce the Black Veil.png" id="102_Pierce the Black Veil" data-flag="@X" onclick="openSidebar('102_Pierce the Black Veil',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\144_Savage Jaw Anjanath.png" id="144_Savage Jaw Anjanath" data-flag="@X" onclick="openSidebar('144_Savage Jaw Anjanath',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\186_Steel Tempest.png" id="186_Steel Tempest" data-flag="@X" onclick="openSidebar('186_Steel Tempest',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\33_Soporific Siren Somnacanth.png" id="33_Soporific Siren Somnacanth" data-flag="@X" onclick="openSidebar('33_Soporific Siren Somnacanth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\73_Twisted Scales Najarala.png" id="73_Twisted Scales Najarala" data-flag="@X" onclick="openSidebar('73_Twisted Scales Najarala',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\106_Seltas Queen.png" id="106_Seltas Queen" data-flag="@X" onclick="openSidebar('106_Seltas Queen',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\149_Shining Thunder Rey Dau.png" id="149_Shining Thunder Rey Dau" data-flag="@X" onclick="openSidebar('149_Shining Thunder Rey Dau',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\189_Territorial Dispute.png" id="189_Territorial Dispute" data-flag="@X" onclick="openSidebar('189_Territorial Dispute',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\36_Underbrush Ambush.png" id="36_Underbrush Ambush" data-flag="@X" onclick="openSidebar('36_Underbrush Ambush',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\76_Violet Foresight.png" id="76_Violet Foresight" data-flag="@X" onclick="openSidebar('76_Violet Foresight',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\111_Swamp Spout Rompompolo.png" id="111_Swamp Spout Rompompolo" data-flag="@X" onclick="openSidebar('111_Swamp Spout Rompompolo',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\153_Vile Dastardly Aknosom.png" id="153_Vile Dastardly Aknosom" data-flag="@X" onclick="openSidebar('153_Vile Dastardly Aknosom',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\190_Toxic Nebula Gigginox.png" id="190_Toxic Nebula Gigginox" data-flag="@X" onclick="openSidebar('190_Toxic Nebula Gigginox',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\38_Wind Drifting Legiana.png" id="38_Wind Drifting Legiana" data-flag="@X" onclick="openSidebar('38_Wind Drifting Legiana',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\78_Wind Shear Hirabami.png" id="78_Wind Shear Hirabami" data-flag="@X" onclick="openSidebar('78_Wind Shear Hirabami',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\113_Thorny Venom Espinas.png" id="113_Thorny Venom Espinas" data-flag="@X" onclick="openSidebar('113_Thorny Venom Espinas',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\154_Witness the End.png" id="154_Witness the End" data-flag="@X" onclick="openSidebar('154_Witness the End',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\191_Unstable Temperament.png" id="191_Unstable Temperament" data-flag="@X" onclick="openSidebar('191_Unstable Temperament',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\1_Agile Velociprey.png" id="1_Agile Velociprey" data-flag="@X" onclick="openSidebar('1_Agile Velociprey',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\42_Aurortle's Moxie.png" id="42_Aurortles Moxie" data-flag="@X" onclick="openSidebar('42_Aurortles Moxie',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\79_Afflicted Appetite.png" id="79_Afflicted Appetite" data-flag="@X" onclick="openSidebar('79_Afflicted Appetite',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\121_Blast Threat.png" id="121_Blast Threat" data-flag="@X" onclick="openSidebar('121_Blast Threat',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\157_Apceros Herd.png" id="157_Apceros Herd" data-flag="@X" onclick="openSidebar('157_Apceros Herd',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\7_Coralhorn Orchestra.png" id="7_Coralhorn Orchestra" data-flag="@X" onclick="openSidebar('7_Coralhorn Orchestra',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\44_Binding Chatacabra.png" id="44_Binding Chatacabra" data-flag="@X" onclick="openSidebar('44_Binding Chatacabra',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\85_Death Defies Death.png" id="85_Death Defies Death" data-flag="@X" onclick="openSidebar('85_Death Defies Death',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\123_Blightbreath Congalala.png" id="123_Blightbreath Congalala" data-flag="@X" onclick="openSidebar('123_Blightbreath Congalala',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\161_Breach The Vale.png" id="161_Breach The Vale" data-flag="@X" onclick="openSidebar('161_Breach The Vale',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\8_Cowardly Jagras.png" id="8_Cowardly Jagras" data-flag="@X" onclick="openSidebar('8_Cowardly Jagras',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\45_Blight Bolt.png" id="45_Blight Bolt" data-flag="@X" onclick="openSidebar('45_Blight Bolt',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\86_Desperate Hunger.png" id="86_Desperate Hunger" data-flag="@X" onclick="openSidebar('86_Desperate Hunger',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\124_Bloodlust Arzuros.png" id="124_Bloodlust Arzuros" data-flag="@X" onclick="openSidebar('124_Bloodlust Arzuros',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\162_Chief Gajalaka.png" id="162_Chief Gajalaka" data-flag="@X" onclick="openSidebar('162_Chief Gajalaka',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\10_Curious Nulberry.png" id="10_Curious Nulberry" data-flag="@X" onclick="openSidebar('10_Curious Nulberry',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\47_Cunning Baggi.png" id="47_Cunning Baggi" data-flag="@X" onclick="openSidebar('47_Cunning Baggi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\89_Feasting Ceanataur.png" id="89_Feasting Ceanataur" data-flag="@X" onclick="openSidebar('89_Feasting Ceanataur',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\130_Fire Pike Agnaktor.png" id="130_Fire Pike Agnaktor" data-flag="@X" onclick="openSidebar('130_Fire Pike Agnaktor',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\163_Crush Carapace.png" id="163_Crush Carapace" data-flag="@X" onclick="openSidebar('163_Crush Carapace',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\13_Flame Barrel Bomb.png" id="13_Flame Barrel Bomb" data-flag="@X" onclick="openSidebar('13_Flame Barrel Bomb',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\48_Devour Body and Mind.png" id="48_Devour Body and Mind" data-flag="@X" onclick="openSidebar('48_Devour Body and Mind',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\98_Latent Mouth Nibelsnarf.png" id="98_Latent Mouth Nibelsnarf" data-flag="@X" onclick="openSidebar('98_Latent Mouth Nibelsnarf',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\131_Firespitting Rachnoid.png" id="131_Firespitting Rachnoid" data-flag="@X" onclick="openSidebar('131_Firespitting Rachnoid',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\164_Crying Neck Larinoth.png" id="164_Crying Neck Larinoth" data-flag="@X" onclick="openSidebar('164_Crying Neck Larinoth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\14_Flame-Tail Quematrice.png" id="14_Flame-Tail Quematrice" data-flag="@X" onclick="openSidebar('14_Flame-Tail Quematrice',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\49_Elusive Bnahabra.png" id="49_Elusive Bnahabra" data-flag="@X" onclick="openSidebar('49_Elusive Bnahabra',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\99_Melynx Shadowpaw.png" id="99_Melynx Shadowpaw" data-flag="@X" onclick="openSidebar('99_Melynx Shadowpaw',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\133_Flame Rake.png" id="133_Flame Rake" data-flag="@X" onclick="openSidebar('133_Flame Rake',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\168_Gluttonous Pukei Pukei.png" id="168_Gluttonous Pukei Pukei" data-flag="@X" onclick="openSidebar('168_Gluttonous Pukei Pukei',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\16_Great Boar Bulldrome.png" id="16_Great Boar Bulldrome" data-flag="@X" onclick="openSidebar('16_Great Boar Bulldrome',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\52_Hypnotic Wingbeat.png" id="52_Hypnotic Wingbeat" data-flag="@X" onclick="openSidebar('52_Hypnotic Wingbeat',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\104_Red Glare Nargacuga.png" id="104_Red Glare Nargacuga" data-flag="@X" onclick="openSidebar('104_Red Glare Nargacuga',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\134_Frenetic Bishaten.png" id="134_Frenetic Bishaten" data-flag="@X" onclick="openSidebar('134_Frenetic Bishaten',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\170_Hurt From The Dirt.png" id="170_Hurt From The Dirt" data-flag="@X" onclick="openSidebar('170_Hurt From The Dirt',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\19_Horned Kelbi.png" id="19_Horned Kelbi" data-flag="@X" onclick="openSidebar('19_Horned Kelbi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\54_Kappa Frog Tetranadon.png" id="54_Kappa Frog Tetranadon" data-flag="@X" onclick="openSidebar('54_Kappa Frog Tetranadon',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\105_Rimebreath Blangonga.png" id="105_Rimebreath Blangonga" data-flag="@X" onclick="openSidebar('105_Rimebreath Blangonga',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\135_Gorging Zamite.png" id="135_Gorging Zamite" data-flag="@X" onclick="openSidebar('135_Gorging Zamite',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\173_Kecha Wacha.png" id="173_Kecha Wacha" data-flag="@X" onclick="openSidebar('173_Kecha Wacha',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\21_Kulu-Ya-ku.png" id="21_Kulu-Ya-ku" data-flag="@X" onclick="openSidebar('21_Kulu-Ya-ku',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\55_Longclaw Boggi.png" id="55_Longclaw Boggi" data-flag="@X" onclick="openSidebar('55_Longclaw Boggi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\107_Sinister Shadow Jyuratodos.png" id="107_Sinister Shadow Jyuratodos" data-flag="@X" onclick="openSidebar('107_Sinister Shadow Jyuratodos',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\139_Lava Beast Uroktor.png" id="139_Lava Beast Uroktor" data-flag="@X" onclick="openSidebar('139_Lava Beast Uroktor',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\180_Pioneer Doshaguma.png" id="180_Pioneer Doshaguma" data-flag="@X" onclick="openSidebar('180_Pioneer Doshaguma',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\25_Opportunistic Remobra.png" id="25_Opportunistic Remobra" data-flag="@X" onclick="openSidebar('25_Opportunistic Remobra',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\57_Miasmal Hypnocatrice.png" id="57_Miasmal Hypnocatrice" data-flag="@X" onclick="openSidebar('57_Miasmal Hypnocatrice',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\108_Stalking Girros.png" id="108_Stalking Girros" data-flag="@X" onclick="openSidebar('108_Stalking Girros',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\145_Scaleblade Hail.png" id="145_Scaleblade Hail" data-flag="@X" onclick="openSidebar('145_Scaleblade Hail',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\182_Sand Fish Cephadrome.png" id="182_Sand Fish Cephadrome" data-flag="@X" onclick="openSidebar('182_Sand Fish Cephadrome',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\26_Ornery Rhenoplos.png" id="26_Ornery Rhenoplos" data-flag="@X" onclick="openSidebar('26_Ornery Rhenoplos',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\62_Rearing Thunderbolt.png" id="62_Rearing Thunderbolt" data-flag="@X" onclick="openSidebar('62_Rearing Thunderbolt',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\109_Strike Down.png" id="109_Strike Down" data-flag="@X" onclick="openSidebar('109_Strike Down',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\146_Scarlet Rose Lala Barina.png" id="146_Scarlet Rose Lala Barina" data-flag="@X" onclick="openSidebar('146_Scarlet Rose Lala Barina',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\187_Support Palamute.png" id="187_Support Palamute" data-flag="@X" onclick="openSidebar('187_Support Palamute',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\30_Scavenging Wulg.png" id="30_Scavenging Wulg" data-flag="@X" onclick="openSidebar('30_Scavenging Wulg',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\63_Royal Ludroth.png" id="63_Royal Ludroth" data-flag="@X" onclick="openSidebar('63_Royal Ludroth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\110_Survival of the Biggest.png" id="110_Survival of the Biggest" data-flag="@X" onclick="openSidebar('110_Survival of the Biggest',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\147_Scavenger Ambush.png" id="147_Scavenger Ambush" data-flag="@X" onclick="openSidebar('147_Scavenger Ambush',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\188_Taunting Facade.png" id="188_Taunting Facade" data-flag="@X" onclick="openSidebar('188_Taunting Facade',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\34_Subduing Seltas.png" id="34_Subduing Seltas" data-flag="@X" onclick="openSidebar('34_Subduing Seltas',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\66_Silver Slider Lagombi.png" id="66_Silver Slider Lagombi" data-flag="@X" onclick="openSidebar('66_Silver Slider Lagombi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\112_Tail Hammer Duramboros.png" id="112_Tail Hammer Duramboros" data-flag="@X" onclick="openSidebar('112_Tail Hammer Duramboros',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\148_Shell Smash.png" id="148_Shell Smash" data-flag="@X" onclick="openSidebar('148_Shell Smash',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\192_Venomous Wroggi.png" id="192_Venomous Wroggi" data-flag="@X" onclick="openSidebar('192_Venomous Wroggi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\37_Vanishing Mists.png" id="37_Vanishing Mists" data-flag="@X" onclick="openSidebar('37_Vanishing Mists',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\74_Tzitzi-Ya-Ku.png" id="74_Tzitzi-Ya-Ku" data-flag="@X" onclick="openSidebar('74_Tzitzi-Ya-Ku',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\115_Vespoid Queen.png" id="115_Vespoid Queen" data-flag="@X" onclick="openSidebar('115_Vespoid Queen',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\151_Terrifying Izuchi.png" id="151_Terrifying Izuchi" data-flag="@X" onclick="openSidebar('151_Terrifying Izuchi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\193_Vigorwasp Spray.png" id="193_Vigorwasp Spray" data-flag="@X" onclick="openSidebar('193_Vigorwasp Spray',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\39_Yian Kut-Ku.png" id="39_Yian Kut-Ku" data-flag="@X" onclick="openSidebar('39_Yian Kut-Ku',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\77_Wind Pressure.png" id="77_Wind Pressure" data-flag="@X" onclick="openSidebar('77_Wind Pressure',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\117_Wade Through Bones.png" id="117_Wade Through Bones" data-flag="@X" onclick="openSidebar('117_Wade Through Bones',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\152_Unchecked Flames.png" id="152_Unchecked Flames" data-flag="@X" onclick="openSidebar('152_Unchecked Flames',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\194_Wasteland Warrior Barroth.png" id="194_Wasteland Warrior Barroth" data-flag="@X" onclick="openSidebar('194_Wasteland Warrior Barroth',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="gold" class="anchor"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\197_Jin Dahaad, The Frozen Peak.png" id="197_Jin Dahaad, The Frozen Peak" data-flag="@X" onclick="openSidebar('197_Jin Dahaad, The Frozen Peak',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\199_Abyssal Namielle.png" id="199_Abyssal Namielle" data-flag="@X" onclick="openSidebar('199_Abyssal Namielle',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\202_Rock Bandit Dodogama.png" id="202_Rock Bandit Dodogama" data-flag="@X" onclick="openSidebar('202_Rock Bandit Dodogama',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\206_Ear-Splitting Brute Tigrex.png" id="206_Ear-Splitting Brute Tigrex" data-flag="@X" onclick="openSidebar('206_Ear-Splitting Brute Tigrex',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\208_Dah'ren Mohran.png" id="208_Dahren Mohran" data-flag="@X" onclick="openSidebar('208_Dahren Mohran',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\196_Blank Stare Khezu.png" id="196_Blank Stare Khezu" data-flag="@X" onclick="openSidebar('196_Blank Stare Khezu',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\200_Ice Armor Zamtrios.png" id="200_Ice Armor Zamtrios" data-flag="@X" onclick="openSidebar('200_Ice Armor Zamtrios',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\203_Volatile Presence.png" id="203_Volatile Presence" data-flag="@X" onclick="openSidebar('203_Volatile Presence',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\205_Death From Above.png" id="205_Death From Above" data-flag="@X" onclick="openSidebar('205_Death From Above',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\209_Great Jaggi.png" id="209_Great Jaggi" data-flag="@X" onclick="openSidebar('209_Great Jaggi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\198_Thunderlord's Judgement.png" id="198_Thunderlords Judgement" data-flag="@X" onclick="openSidebar('198_Thunderlords Judgement',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\201_Tides of Battle.png" id="201_Tides of Battle" data-flag="@X" onclick="openSidebar('201_Tides of Battle',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\204_World Eater Deviljho.png" id="204_World Eater Deviljho" data-flag="@X" onclick="openSidebar('204_World Eater Deviljho',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\207_Rathalos, King of the Skies.png" id="207_Rathalos, King of the Skies" data-flag="@X" onclick="openSidebar('207_Rathalos, King of the Skies',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\210_Pack Empowerment.png" id="210_Pack Empowerment" data-flag="@X" onclick="openSidebar('210_Pack Empowerment',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\213_Nakarkos, Harbinger of Death.png" id="213_Nakarkos, Harbinger of Death" data-flag="@X" onclick="openSidebar('213_Nakarkos, Harbinger of Death',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\215_Dark Eclipse Gore Magala.png" id="215_Dark Eclipse Gore Magala" data-flag="@X" onclick="openSidebar('215_Dark Eclipse Gore Magala',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\219_Viper Tobi-Kadachi.png" id="219_Viper Tobi-Kadachi" data-flag="@X" onclick="openSidebar('219_Viper Tobi-Kadachi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\220_Golden Mane Rajang.png" id="220_Golden Mane Rajang" data-flag="@X" onclick="openSidebar('220_Golden Mane Rajang',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\222_Crested Torrent Uth Duna.png" id="222_Crested Torrent Uth Duna" data-flag="@X" onclick="openSidebar('222_Crested Torrent Uth Duna',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\211_Bone Hammer Radobaan.png" id="211_Bone Hammer Radobaan" data-flag="@X" onclick="openSidebar('211_Bone Hammer Radobaan',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\214_Colossal Garangolm.png" id="214_Colossal Garangolm" data-flag="@X" onclick="openSidebar('214_Colossal Garangolm',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\217_Flash of Surspikes.png" id="217_Flash of Surspikes" data-flag="@X" onclick="openSidebar('217_Flash of Surspikes',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\221_Roaring Tigrex.png" id="221_Roaring Tigrex" data-flag="@X" onclick="openSidebar('221_Roaring Tigrex',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\223_Ferocious Bull Banbaro.png" id="223_Ferocious Bull Banbaro" data-flag="@X" onclick="openSidebar('223_Ferocious Bull Banbaro',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\212_Nakarkos' Blessing.png" id="212_Nakarkos Blessing" data-flag="@X" onclick="openSidebar('212_Nakarkos Blessing',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\216_Fists of Fire and Ice.png" id="216_Fists of Fire and Ice" data-flag="@X" onclick="openSidebar('216_Fists of Fire and Ice',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\218_Rathian, Queen of the Land.png" id="218_Rathian, Queen of the Land" data-flag="@X" onclick="openSidebar('218_Rathian, Queen of the Land',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\224_Trigger Point.png" id="224_Trigger Point" data-flag="@X" onclick="openSidebar('224_Trigger Point',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\232_Glorious Kulve Taroth.png" id="232_Glorious Kulve Taroth" data-flag="@N" onclick="openSidebar('232_Glorious Kulve Taroth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\225_Alatreon, Brilliant Darkness.png" id="225_Alatreon, Brilliant Darkness" data-flag="@X" onclick="openSidebar('225_Alatreon, Brilliant Darkness',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\227_Arkveld, Ashen Blade Unearthed.png" id="227_Arkveld, Ashen Blade Unearthed" data-flag="@X" onclick="openSidebar('227_Arkveld, Ashen Blade Unearthed',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\237_Safi'Jiiva, Sapphire Emperor.png" id="237_SafiJiiva, Sapphire Emperor" data-flag="@X" onclick="openSidebar('237_SafiJiiva, Sapphire Emperor',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\239_Velkhana the Iceborne.png" id="239_Velkhana the Iceborne" data-flag="@X" onclick="openSidebar('239_Velkhana the Iceborne',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\234_Kushala Daora.png" id="234_Kushala Daora" data-flag="@X" onclick="openSidebar('234_Kushala Daora',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\233_Invading Tyrant Bazelgeuse.png" id="233_Invading Tyrant Bazelgeuse" data-flag="@X" onclick="openSidebar('233_Invading Tyrant Bazelgeuse',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\228_The Black Flame, Fatalis.png" id="228_The Black Flame, Fatalis" data-flag="@X" onclick="openSidebar('228_The Black Flame, Fatalis',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\236_Narwa, the Allmother.png" id="236_Narwa, the Allmother" data-flag="@N" onclick="openSidebar('236_Narwa, the Allmother',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\229_Dalamadur, Shah Eternal.png" id="229_Dalamadur, Shah Eternal" data-flag="@X" onclick="openSidebar('229_Dalamadur, Shah Eternal',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\230_Dire Miralis, the Calamity.png" id="230_Dire Miralis, the Calamity" data-flag="@X" onclick="openSidebar('230_Dire Miralis, the Calamity',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\235_Malzeno, Scarlet Feast.png" id="235_Malzeno, Scarlet Feast" data-flag="@X" onclick="openSidebar('235_Malzeno, Scarlet Feast',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\226_Argent Comet Valstrax.png" id="226_Argent Comet Valstrax" data-flag="@N" onclick="openSidebar('226_Argent Comet Valstrax',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\238_Shagaru Magala.png" id="238_Shagaru Magala" data-flag="@N" onclick="openSidebar('238_Shagaru Magala',false)"></div>
+			<div class="container"><img data-alt_src="/sets\MHR-files\img\231_The Elder Crossing_back.png" alt="/sets\MHR-files\img\231_The Elder Crossing_front.png" id="231_The Elder Crossing" data-flag="@XD" onclick="openSidebar('231_The Elder Crossing',false)"><button class="flip-btn" onclick="imgFlip('231_The Elder Crossing')"></button></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="colorless" class="anchor"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\254_Zoh Shia, the White Seraph.png" id="254_Zoh Shia, the White Seraph" data-flag="@X" onclick="openSidebar('254_Zoh Shia, the White Seraph',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\241_Explosive Hammer Uragaan.png" id="241_Explosive Hammer Uragaan" data-flag="@X" onclick="openSidebar('241_Explosive Hammer Uragaan',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\243_Felyne Shield Spire.png" id="243_Felyne Shield Spire" data-flag="@X" onclick="openSidebar('243_Felyne Shield Spire',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\245_Gatling Gun.png" id="245_Gatling Gun" data-flag="@X" onclick="openSidebar('245_Gatling Gun',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\246_God Serpent Remains.png" id="246_God Serpent Remains" data-flag="@X" onclick="openSidebar('246_God Serpent Remains',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\247_Grimalkyne Vine Trap.png" id="247_Grimalkyne Vine Trap" data-flag="@X" onclick="openSidebar('247_Grimalkyne Vine Trap',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\248_Lightning Rod Ceratonoth.png" id="248_Lightning Rod Ceratonoth" data-flag="@X" onclick="openSidebar('248_Lightning Rod Ceratonoth',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\250_Sand Sea Balahara.png" id="250_Sand Sea Balahara" data-flag="@X" onclick="openSidebar('250_Sand Sea Balahara',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\251_Shield Bug Konchu.png" id="251_Shield Bug Konchu" data-flag="@X" onclick="openSidebar('251_Shield Bug Konchu',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\240_Boaboa Clan.png" id="240_Boaboa Clan" data-flag="@X" onclick="openSidebar('240_Boaboa Clan',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\242_Felyne Explorer's Goggles.png" id="242_Felyne Explorers Goggles" data-flag="@X" onclick="openSidebar('242_Felyne Explorers Goggles',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\244_Forlorn Camp.png" id="244_Forlorn Camp" data-flag="@X" onclick="openSidebar('244_Forlorn Camp',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\249_Pitfall Trap.png" id="249_Pitfall Trap" data-flag="@X" onclick="openSidebar('249_Pitfall Trap',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\252_Truffle Hunter Mosswine.png" id="252_Truffle Hunter Mosswine" data-flag="@X" onclick="openSidebar('252_Truffle Hunter Mosswine',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\253_Wading Slagtoth.png" id="253_Wading Slagtoth" data-flag="@X" onclick="openSidebar('253_Wading Slagtoth',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="land" class="anchor"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\270_Sandy Plains.png" id="270_Sandy Plains" data-flag="@X" onclick="openSidebar('270_Sandy Plains',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\260_Deserted Island.png" id="260_Deserted Island" data-flag="@X" onclick="openSidebar('260_Deserted Island',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\276_Wyvern's End.png" id="276_Wyverns End" data-flag="@X" onclick="openSidebar('276_Wyverns End',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\275_Wildspire Wastes.png" id="275_Wildspire Wastes" data-flag="@X" onclick="openSidebar('275_Wildspire Wastes',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\256_Ancient Forest.png" id="256_Ancient Forest" data-flag="@X" onclick="openSidebar('256_Ancient Forest',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\263_Frost Islands.png" id="263_Frost Islands" data-flag="@X" onclick="openSidebar('263_Frost Islands',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\264_Frozen Seaway.png" id="264_Frozen Seaway" data-flag="@X" onclick="openSidebar('264_Frozen Seaway',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\274_Volcanic Hollow.png" id="274_Volcanic Hollow" data-flag="@X" onclick="openSidebar('274_Volcanic Hollow',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\267_Primal Forest.png" id="267_Primal Forest" data-flag="@X" onclick="openSidebar('267_Primal Forest',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\273_Verdant Hills.png" id="273_Verdant Hills" data-flag="@X" onclick="openSidebar('273_Verdant Hills',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\268_Rotten Vale.png" id="268_Rotten Vale" data-flag="@X" onclick="openSidebar('268_Rotten Vale',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\259_Coral Highlands.png" id="259_Coral Highlands" data-flag="@X" onclick="openSidebar('259_Coral Highlands',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\272_Shrine Ruins.png" id="272_Shrine Ruins" data-flag="@X" onclick="openSidebar('272_Shrine Ruins',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\255_Ancestral Steppe.png" id="255_Ancestral Steppe" data-flag="@X" onclick="openSidebar('255_Ancestral Steppe',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\262_Flooded Forest.png" id="262_Flooded Forest" data-flag="@X" onclick="openSidebar('262_Flooded Forest',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\257_Castle Schrade.png" id="257_Castle Schrade" data-flag="@X" onclick="openSidebar('257_Castle Schrade',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\258_The Citadel.png" id="258_The Citadel" data-flag="@X" onclick="openSidebar('258_The Citadel',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\265_The Guiding Lands.png" id="265_The Guiding Lands" data-flag="@X" onclick="openSidebar('265_The Guiding Lands',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\266_Origin Isle.png" id="266_Origin Isle" data-flag="@X" onclick="openSidebar('266_Origin Isle',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\271_Seat of The Shah.png" id="271_Seat of The Shah" data-flag="@X" onclick="openSidebar('271_Seat of The Shah',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\261_Elder's Recess.png" id="261_Elders Recess" data-flag="@X" onclick="openSidebar('261_Elders Recess',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\269_Sacred Pinnacle.png" id="269_Sacred Pinnacle" data-flag="@X" onclick="openSidebar('269_Sacred Pinnacle',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="token" class="anchor"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\1t_Bloodblight.png" id="1t_Bloodblight" data-flag="@X" onclick="openSidebar('1t_Bloodblight',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\3t_Frenzy Virus.png" id="3t_Frenzy Virus" data-flag="@X" onclick="openSidebar('3t_Frenzy Virus',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\2t_Dragonblight.png" id="2t_Dragonblight" data-flag="@X" onclick="openSidebar('2t_Dragonblight',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\24t_Clue.png" id="24t_Clue" data-flag="@N" onclick="openSidebar('24t_Clue',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\25t_Treasure.png" id="25t_Treasure" data-flag="@N" onclick="openSidebar('25t_Treasure',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\26t_Wall.png" id="26t_Wall" data-flag="@N" onclick="openSidebar('26t_Wall',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\27t_Forest.png" id="27t_Forest" data-flag="@N" onclick="openSidebar('27t_Forest',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\13t_Shadow of The Shah.png" id="13t_Shadow of The Shah" data-flag="@N" onclick="openSidebar('13t_Shadow of The Shah',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\4t_Cowardly Jagras.png" id="4t_Cowardly Jagras" data-flag="@N" onclick="openSidebar('4t_Cowardly Jagras',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\5t_Lizard.png" id="5t_Lizard" data-flag="@N" onclick="openSidebar('5t_Lizard',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\6t_Thunderblight.png" id="6t_Thunderblight" data-flag="@X" onclick="openSidebar('6t_Thunderblight',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\7t_Wolf.png" id="7t_Wolf" data-flag="@N" onclick="openSidebar('7t_Wolf',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\8t_Cunning Baggi.png" id="8t_Cunning Baggi" data-flag="@N" onclick="openSidebar('8t_Cunning Baggi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\9t_Iceblight.png" id="9t_Iceblight" data-flag="@X" onclick="openSidebar('9t_Iceblight',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\10t_Blastblight.png" id="10t_Blastblight" data-flag="@X" onclick="openSidebar('10t_Blastblight',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\11t_Insect.png" id="11t_Insect" data-flag="@N" onclick="openSidebar('11t_Insect',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\12t_Leech.png" id="12t_Leech" data-flag="@N" onclick="openSidebar('12t_Leech',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\14t_Stalking Girros.png" id="14t_Stalking Girros" data-flag="@N" onclick="openSidebar('14t_Stalking Girros',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\15t_Tentacle.png" id="15t_Tentacle" data-flag="@N" onclick="openSidebar('15t_Tentacle',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\16t_Fireblight.png" id="16t_Fireblight" data-flag="@X" onclick="openSidebar('16t_Fireblight',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\17t_Terrifying Izuchi.png" id="17t_Terrifying Izuchi" data-flag="@N" onclick="openSidebar('17t_Terrifying Izuchi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\18t_Dinosaur.png" id="18t_Dinosaur" data-flag="@N" onclick="openSidebar('18t_Dinosaur',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\19t_Elk.png" id="19t_Elk" data-flag="@N" onclick="openSidebar('19t_Elk',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\20t_Fish.png" id="20t_Fish" data-flag="@N" onclick="openSidebar('20t_Fish',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\21t_Venomous Wroggi.png" id="21t_Venomous Wroggi" data-flag="@N" onclick="openSidebar('21t_Venomous Wroggi',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\22t_Waterblight.png" id="22t_Waterblight" data-flag="@X" onclick="openSidebar('22t_Waterblight',false)"></div>
+			<div class="container"><img alt="/sets\MHR-files\img\23t_Wyvern.png" id="23t_Wyvern" data-flag="@N" onclick="openSidebar('23t_Wyvern',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+	</div>
+</div>
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-container">
+			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
+			<img id="sidebar_h_img" class="sidebar-h-img">
+			<button class="flip-btn" id="sidebar-flip-btn" onclick="imgFlip('sidebar_img')"></button>
+		</div>
+		<button class="close-btn" onclick="closeSidebar()"></button>
+	</div>
+	<div class="footer"></div>
+
+	<script>
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+		let specialchars = "";
+
+	document.addEventListener('DOMContentLoaded', async function() {
+		await fetch('/lists/all-cards.json')
+					.then(response => response.json())
+					.then(json => {
+						card_list = json;
+				}).catch(error => console.error('Error:', error));
+
+				await fetch('/resources/replacechars.txt')
+					.then(response => response.text())
+					.then(text => {
+						specialchars = text; 
+				}).catch(error => console.error('Error:', error));
+
+				card_list_arrayified = card_list.cards;
+
+		preloadImgs = document.getElementsByClassName('preload-hidden');
+		
+		let images_loaded = [];
+
+		do {
+			await delay(100);
+			images_loaded = []
+			for (const img of preloadImgs)
+			{
+				images_loaded.push(isImageOk(img));
+			}
+		}
+		while (images_loaded.includes(false));
+
+		
+		loadImages();
+	});
+
+	function isImageOk(img) {
+		if (!img.complete || img.naturalWidth == 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function loadImages() {
+		const images = document.querySelectorAll('.grid-container img');
+
+		images.forEach(img => {
+			const flag = img.getAttribute('data-flag');
+
+			if (flag === '@N') {
+				img.src = '/img/card_back.png';
+				img.removeAttribute("onclick");
+				img.style.cursor = 'default';
+			}
+			else
+			{
+				img.src = img.alt;
+
+				if (flag === '@E') {
+					img.removeAttribute("onclick");
+					img.style.cursor = 'default';
+				}
+			}
+
+			img.style.visibility = 'visible';
+		});
+	}
+
+	window.addEventListener('resize', function(event) {
+		setSidebarTop();
+	}, true);
+
+	function setSidebarTop() {
+		let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+		let sh = document.getElementById('sidebar').offsetHeight;
+		let height = 100 * ((vh - sh) / 2) / vh;
+		document.getElementById('sidebar').style.top = height + '%';
+	}
+
+	let horizontal = false;
+
+	function imgFlip(num) {
+		tmp = document.getElementById(num).src;
+		console.log(num);
+		document.getElementById(num).src = document.getElementById(num).dataset.alt_src;
+		document.getElementById(num).dataset.alt_src = tmp;
+
+		if (num == 'sidebar_img')
+		{
+			const rotated_img = document.getElementById('sidebar_h_img');
+			const sidebar_img = document.getElementById('sidebar_img');
+
+			if (horizontal && rotated_img.style.display == 'none')
+			{
+				rotated_img.style.display = "block";
+				sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+			}
+			else
+			{
+				rotated_img.style.display = "none";
+				sidebar_img.style.filter = "";
+			}
+		}
+	}
+
+	function openSidebar(id, h = false) {
+		horizontal = h;
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+		
+		document.getElementById('sidebar').style.display = 'grid';
+
+		const rotated_img = document.getElementById('sidebar_h_img');
+		const sidebar_img = document.getElementById('sidebar_img');
+
+		sidebar_img.src = document.getElementById(id).src;
+		rotated_img.src = document.getElementById(id).src.replace("_back", "_front");
+
+		if (horizontal && !sidebar_img.src.includes("_back"))
+		{
+			rotated_img.style.display = "block";
+			sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+		}
+		else
+		{
+			rotated_img.style.display = "none";
+			sidebar_img.style.filter = "";
+		}
+
+		if (document.getElementById(id).dataset.alt_src)
+		{
+			document.getElementById('sidebar_img').dataset.alt_src = document.getElementById(id).dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'block';
+		}
+		else
+		{
+			delete document.getElementById('sidebar_img').dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'none';
+		}
+		document.getElementById('main-content').style.width = '60%';
+		
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+		setSidebarTop();
+	}
+
+	function closeSidebar() {
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'none';
+		document.getElementById('main-content').style.width = '100%';
+		
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	document.getElementById("search").addEventListener("keypress", function(event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			search();
+		}
+	});
+
+	function search() {
+		const url = new URL('search', window.location.origin);
+		url.searchParams.append('search', document.getElementById("search").value);
+		window.location.href = url;
+	}
+
+		function randomCard() {
+				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
+				let random_card = card_list_arrayified[i];
+
+				const url = new URL('card', window.location.origin);
+				const params = {
+					set: random_card.set,
+					num: random_card.number,
+					name: random_card.card_name
+				}
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
+				}
+
+				window.location.href = url;
+			}
+	</script>
+</body>
+</html>
