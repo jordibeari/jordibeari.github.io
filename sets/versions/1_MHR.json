@@ -4325,7 +4325,7 @@
             "number": 257,
             "color_identity": "C",
             "cost": "",
-            "rules_text": "{T}, Pay 1 life: Add one mana of any color. This mana can't be spent to cast a noncreature spell.\nWhenever a creature enters, if four or more creatures have entered this turn, you may sacrifice Castle Schrade. If you do, search your library for a large monster creature card, reveal it, put it into your hand, then shuffle.",
+            "rules_text": "{T}: Add one mana of any color. This mana can't be spent to cast a noncreature spell.\nWhenever a nontoken creature enters, if five or more creatures have entered this turn, you may sacrifice Castle Schrade. If you do, search your library for a Legendary card, reveal it, put it into your hand, then shuffle.",
             "flavor_text": "[i][/i]",
             "pt": "",
             "special_text": "",
