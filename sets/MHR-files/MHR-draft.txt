@@ -145,9 +145,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{5}{W}",
 			"type": "Creature — Merfolk Wyvern",
-			"collector_number": "33",
+			"collector_number": "32",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/33_Soporific Siren Somnacanth.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/32_Soporific Siren Somnacanth.png"
 			}
 		},
 		{
@@ -415,9 +415,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{3}{G}",
 			"type": "Creature — Elemental Wyvern",
-			"collector_number": "159",
+			"collector_number": "158",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/159_Bellowing Boulder Basarios.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/158_Bellowing Boulder Basarios.png"
 			}
 		},
 		{
@@ -485,9 +485,9 @@
 			"rarity": "rare",
 			"mana_cost": "{2}{W}",
 			"type": "Creature — Knight Wyvern",
-			"collector_number": "31",
+			"collector_number": "30",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/31_Scorching Blade Glavenus.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/30_Scorching Blade Glavenus.png"
 			}
 		},
 		{
@@ -495,9 +495,9 @@
 			"rarity": "rare",
 			"mana_cost": "{X}{W}{W}{W}",
 			"type": "Sorcery",
-			"collector_number": "29",
+			"collector_number": "28",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/29_Sapphire of the Emperor.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/28_Sapphire of the Emperor.png"
 			}
 		},
 		{
@@ -585,9 +585,9 @@
 			"rarity": "rare",
 			"mana_cost": "{3}{G}",
 			"type": "Legendary Creature — Elder Dragon Fungus",
-			"collector_number": "160",
+			"collector_number": "159",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/160_Blackveil Vaal Hazak.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/159_Blackveil Vaal Hazak.png"
 			}
 		},
 		{
@@ -705,9 +705,9 @@
 			"rarity": "rare",
 			"mana_cost": "{6}{G}{G}",
 			"type": "Creature — Elemental Wyvern",
-			"collector_number": "158",
+			"collector_number": "157",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/158_Armored Gravios.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/157_Armored Gravios.png"
 			}
 		},
 		{
@@ -725,9 +725,9 @@
 			"rarity": "rare",
 			"mana_cost": "{2}{G}",
 			"type": "Legendary Creature — Elder Crab",
-			"collector_number": "167",
+			"collector_number": "165",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/167_Fortress Shen Gaoren.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/165_Fortress Shen Gaoren.png"
 			}
 		},
 		{
@@ -751,13 +751,13 @@
 			}
 		},
 		{
-			"name": "Flush from the thicket",
+			"name": "Gaze from the Thicket",
 			"rarity": "rare",
 			"mana_cost": "{2}{G}",
 			"type": "Sorcery",
 			"collector_number": "166",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/166_Flush from the thicket.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/166_Gaze from the Thicket.png"
 			}
 		},
 		{
@@ -765,9 +765,9 @@
 			"rarity": "rare",
 			"mana_cost": "{2}{G}",
 			"type": "Legendary Artifact",
-			"collector_number": "165",
+			"collector_number": "164",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/165_The Dragontorch.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/164_The Dragontorch.png"
 			}
 		},
 		{
@@ -785,9 +785,9 @@
 			"rarity": "mythic",
 			"mana_cost": "{3}{W}",
 			"type": "Legendary Creature — Elder Horror",
-			"collector_number": "32",
+			"collector_number": "31",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/32_Shara Ishvalda, the Everwyrm.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/31_Shara Ishvalda, the Everwyrm.png"
 			}
 		},
 		{
@@ -1032,7 +1032,7 @@
 		},
 		{
 			"name": "Kushala Daora",
-			"rarity": "rare",
+			"rarity": "mythic",
 			"mana_cost": "{3}{W}{U}{U}{B}",
 			"type": "Artifact Creature — Elder Dragon",
 			"collector_number": "234",
@@ -1173,7 +1173,7 @@
 		{
 			"name": "Invasive Species",
 			"rarity": "uncommon",
-			"mana_cost": "{3}{G}",
+			"mana_cost": "{2}{G}",
 			"type": "Enchantment",
 			"collector_number": "172",
 			"image_uris": {
@@ -1354,7 +1354,7 @@
 			"name": "Crested Torrent Uth Duna",
 			"rarity": "rare",
 			"mana_cost": "{G}{G}{U}{U}",
-			"type": "Creature",
+			"type": "Creature — Fish Leviathan",
 			"collector_number": "222",
 			"image_uris": {
 				"en": "https://jordibeari.github.io/sets/MHR-files/img/222_Crested Torrent Uth Duna.png"
@@ -1705,9 +1705,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{W}",
 			"type": "Creature — Badger Wolf",
-			"collector_number": "30",
+			"collector_number": "29",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/30_Scavenging Wulg.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/29_Scavenging Wulg.png"
 			}
 		},
 		{
@@ -1721,13 +1721,13 @@
 			}
 		},
 		{
-			"name": "Ornery Rhenoplos",
+			"name": "Stampeding Aptonoth",
 			"rarity": "common",
 			"mana_cost": "{2}{W}",
 			"type": "Creature — Dinosaur",
-			"collector_number": "26",
+			"collector_number": "33",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/26_Ornery Rhenoplos.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/33_Stampeding Aptonoth.png"
 			}
 		},
 		{
@@ -1881,13 +1881,13 @@
 			}
 		},
 		{
-			"name": "Apceros Herd",
+			"name": "Herding Apceros",
 			"rarity": "common",
 			"mana_cost": "{1}{G}",
 			"type": "Creature — Dinosaur",
-			"collector_number": "157",
+			"collector_number": "169",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/157_Apceros Herd.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/169_Herding Apceros.png"
 			}
 		},
 		{
@@ -1895,9 +1895,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{G}",
 			"type": "Creature — Cat Shaman",
-			"collector_number": "162",
+			"collector_number": "161",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/162_Chief Gajalaka.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/161_Chief Gajalaka.png"
 			}
 		},
 		{
@@ -1925,9 +1925,9 @@
 			"rarity": "common",
 			"mana_cost": "{3}{G}",
 			"type": "Creature — Dinosaur",
-			"collector_number": "164",
+			"collector_number": "163",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/164_Crying Neck Larinoth.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/163_Crying Neck Larinoth.png"
 			}
 		},
 		{
@@ -1945,9 +1945,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{G}{G}",
 			"type": "Creature — Lizard Wyvern",
-			"collector_number": "168",
+			"collector_number": "167",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/168_Gluttonous Pukei Pukei.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/167_Gluttonous Pukei Pukei.png"
 			}
 		},
 		{
@@ -1965,9 +1965,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{G}",
 			"type": "Sorcery",
-			"collector_number": "161",
+			"collector_number": "160",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/161_Breach The Vale.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/160_Breach The Vale.png"
 			}
 		},
 		{
@@ -1985,9 +1985,9 @@
 			"rarity": "common",
 			"mana_cost": "{1}{G}",
 			"type": "Sorcery",
-			"collector_number": "163",
+			"collector_number": "162",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/163_Crush Carapace.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/162_Crush Carapace.png"
 			}
 		},
 		{
@@ -2682,9 +2682,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{3}{G}",
 			"type": "Creature — Bird Lizard",
-			"collector_number": "169",
+			"collector_number": "168",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/169_Great Wroggi.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/168_Great Wroggi.png"
 			}
 		},
 		{
@@ -2762,9 +2762,9 @@
 			"rarity": "rare",
 			"mana_cost": "{2}{W}",
 			"type": "Instant",
-			"collector_number": "28",
+			"collector_number": "27",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/28_Royal Resurgence.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/27_Royal Resurgence.png"
 			}
 		},
 		{
@@ -2812,14 +2812,14 @@
 			"rarity": "rare",
 			"mana_cost": "{2}{W}{W}",
 			"type": "Enchantment — Saga",
-			"collector_number": "27",
+			"collector_number": "26",
 			"image_uris": {
-				"en": "https://jordibeari.github.io/sets/MHR-files/img/27_The Rampage.png"
+				"en": "https://jordibeari.github.io/sets/MHR-files/img/26_The Rampage.png"
 			}
 		},
 		{
 			"name": "Glorious Kulve Taroth",
-			"rarity": "mythic",
+			"rarity": "rare",
 			"mana_cost": "{W}{U}{B}",
 			"type": "Legendary Creature — Goat Dragon",
 			"collector_number": "232",
@@ -3069,7 +3069,7 @@
 	2 Fortress Shen Gaoren
 	2 Pavilion Empress Ahtal-Ka
 	2 Malice Tiger Magnamalo
-	2 Flush from the thicket
+	2 Gaze from the Thicket
 	2 The Dragontorch
 	1 Amatsu, Heaven's Catastrophe
 	1 Shara Ishvalda, the Everwyrm
@@ -3089,7 +3089,7 @@
 	2 Golden Mane Rajang
 	2 Malzeno, Scarlet Feast
 	2 Invading Tyrant Bazelgeuse
-	2 Kushala Daora
+	1 Kushala Daora
 	1 Alatreon, Brilliant Darkness
 	1 Arkveld, Ashen Blade Unearthed
 	1 Safi'Jiiva, Sapphire Emperor
@@ -3119,7 +3119,7 @@
 	2 Argent Comet Valstrax
 	2 Flame King Teostra
 	2 The Rampage
-	1 Glorious Kulve Taroth
+	2 Glorious Kulve Taroth
 	1 Narwa, the Allmother
 [uncommon(4)]
 	4 Crimson Cannonball Volvidon
@@ -3282,7 +3282,7 @@
 	8 Subduing Seltas
 	8 Scavenging Wulg
 	8 Yian Kut-Ku
-	8 Ornery Rhenoplos
+	8 Stampeding Aptonoth
 	8 Horned Kelbi
 	8 Great Boar Bulldrome
 	8 Agile Velociprey
@@ -3298,7 +3298,7 @@
 	8 Flame Rake
 	8 Unchecked Flames
 	8 Scaleblade Hail
-	8 Apceros Herd
+	8 Herding Apceros
 	8 Chief Gajalaka
 	8 Venomous Wroggi
 	8 Support Palamute
@@ -3394,7 +3394,7 @@
 	7 Fortress Shen Gaoren
 	7 Pavilion Empress Ahtal-Ka
 	7 Malice Tiger Magnamalo
-	7 Flush from the thicket
+	7 Gaze from the Thicket
 	7 The Dragontorch
 	4 Amatsu, Heaven's Catastrophe
 	4 Shara Ishvalda, the Everwyrm
@@ -3422,7 +3422,7 @@
 	15 Explosive Hammer Uragaan
 	7 Malzeno, Scarlet Feast
 	7 Invading Tyrant Bazelgeuse
-	7 Kushala Daora
+	4 Kushala Daora
 	4 Alatreon, Brilliant Darkness
 	4 Arkveld, Ashen Blade Unearthed
 	4 Safi'Jiiva, Sapphire Emperor
@@ -3491,7 +3491,7 @@
 	6 Subduing Seltas
 	6 Scavenging Wulg
 	6 Yian Kut-Ku
-	6 Ornery Rhenoplos
+	6 Stampeding Aptonoth
 	6 Horned Kelbi
 	6 Great Boar Bulldrome
 	6 Agile Velociprey
@@ -3507,7 +3507,7 @@
 	6 Flame Rake
 	6 Unchecked Flames
 	6 Scaleblade Hail
-	6 Apceros Herd
+	6 Herding Apceros
 	6 Chief Gajalaka
 	6 Venomous Wroggi
 	6 Support Palamute
@@ -3592,6 +3592,6 @@
 	7 Argent Comet Valstrax
 	7 Flame King Teostra
 	7 The Rampage
-	4 Glorious Kulve Taroth
+	7 Glorious Kulve Taroth
 	4 Narwa, the Allmother
 	15 Dragonator
