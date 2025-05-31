@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="/sets/OBO-files/icon.png"/>
+	<link rel="stylesheet" href="/resources/header.css">
+	<title>OBO visual preview</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			overscroll-behavior: none;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.main-content {
+			position: relative;
+			width: 100%;
+			float: left;
+			z-index: 2;
+			justify-items: center;
+		}
+		.sidebar {
+			position: sticky;
+			top: 0;
+			display: none;
+			text-align: center;
+			padding-right: 3%;
+			z-index: 1;
+			justify-items: center;
+		}
+		.sidebar-container {
+			width: 80%;
+			max-width: 375px;
+			position: relative;
+		}
+		.sidebar-h-img {
+			display: none;
+			transform: rotate(90deg);
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			width: 85%;
+		}
+		.sidebar-img {
+			vertical-align: middle;
+			width: 100%;
+		}
+		.close-btn {
+			background: url('/img/close.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 10%;
+			height: 10%;
+			border: none;
+			cursor: pointer;
+			position: absolute;
+			right: 4%;
+		}
+		.close-btn:hover {
+			background: url('/img/close-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 2px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-bottom: 1%;
+			justify-items: center;
+			max-width: 1200px;
+		}
+		.grid-container img {
+			width: 100%;
+			height: auto;
+			display: block;
+			visibility: hidden;
+			cursor: pointer;
+		}
+		.banner {
+			width: 100%;
+			height: auto;
+			padding-top: 20px;
+			padding-bottom: 50px;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+			max-width: 30%;
+			max-height: 320px;
+		}
+		.container {
+			position: relative;
+			width: 100%;
+		}
+		.container img {
+			width: 100%;
+			height: auto;
+		}
+		.flip-btn {
+			background: url('/img/flip.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 15%;
+			height: 11%;
+			cursor: pointer;
+			border: none;
+			position: absolute;
+			left: 50%;
+			top: 48%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+		}
+		.flip-btn:hover {
+			background: url('/img/flip-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.icon-bar {
+			display: grid;
+			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
+			gap: 1px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-top: 2%;
+			padding-bottom: 1%;
+			justify-items: center;
+			align-items: center;
+		}
+		.icon-bar .icon img {
+			width: 90%;
+			max-width: 80px;
+			height: auto;
+			display: block;
+			padding: 5%;
+			margin: auto;
+			text-align: center;
+		}
+		.icon-bar .dot img {
+			width: 50%;
+			max-width: 65px;
+			height: auto;
+			display: block;
+			margin: auto;
+			text-align: center;
+		}
+		.preload-hidden {
+			display: none;
+		}
+		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
+		.footer {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<img class="preload-hidden" src="/img/dot.png" />
+	<img class="preload-hidden" src="/sets/OBO-files/logo.png" />
+	<img class="preload-hidden" src="/sets/MHR-files/icon.png" />
+		<img class="preload-hidden" src="/sets/OBO-files/icon.png" />
+		<div class="header">
+		<div class="search-grid">
+			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
+			<img class="sg-icon" src="/img/search.png">
+			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
+			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
+		</div>
+	</div>
+
+	<div class="icon-bar">
+			<div class="icon"><a href="MHR"><img src="/sets/MHR-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="OBO"><img src="/sets/OBO-files/icon.png"></img></a></div>
+
+		</div>
+		<div class="banner">
+		<img class="logo" src="/sets/OBO-files/logo.png">
+		</div>
+		<div class="main-content" id="main-content">
+			<div class="grid-container">
+				<div class="container"><img alt="/sets\OBO-files\img\42_The Good Captain.png" id="42_The Good Captain" data-flag="@X" onclick="openSidebar('42_The Good Captain',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\76_Coralmind Sphinx.png" id="76_Coralmind Sphinx" data-flag="@X" onclick="openSidebar('76_Coralmind Sphinx',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\125_Demon of The Trench.png" id="125_Demon of The Trench" data-flag="@X" onclick="openSidebar('125_Demon of The Trench',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\162_Fateless Affliction.png" id="162_Fateless Affliction" data-flag="@X" onclick="openSidebar('162_Fateless Affliction',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\200_Cyclic Evolution.png" id="200_Cyclic Evolution" data-flag="@X" onclick="openSidebar('200_Cyclic Evolution',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\59_Skydiving Cloudcaller_back.png" alt="/sets\OBO-files\img\59_Skydiving Cloudcaller_front.png" id="59_Skydiving Cloudcaller" data-flag="@XD" onclick="openSidebar('59_Skydiving Cloudcaller',false)"><button class="flip-btn" onclick="imgFlip('59_Skydiving Cloudcaller')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\78_Crush of Tentacles.png" id="78_Crush of Tentacles" data-flag="@X" onclick="openSidebar('78_Crush of Tentacles',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\131_Jalek Molde, First of The Fleet.png" id="131_Jalek Molde, First of The Fleet" data-flag="@X" onclick="openSidebar('131_Jalek Molde, First of The Fleet',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\183_Threatening Fork-Tongue_back.png" alt="/sets\OBO-files\img\183_Threatening Fork-Tongue_front.png" id="183_Threatening Fork-Tongue" data-flag="@XD" onclick="openSidebar('183_Threatening Fork-Tongue',false)"><button class="flip-btn" onclick="imgFlip('183_Threatening Fork-Tongue')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\214_Okarias, The Drowned.png" id="214_Okarias, The Drowned" data-flag="@X" onclick="openSidebar('214_Okarias, The Drowned',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\70_Yuvia, Wavewing Guardian.png" id="70_Yuvia, Wavewing Guardian" data-flag="@X" onclick="openSidebar('70_Yuvia, Wavewing Guardian',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\95_Ria, Torrentcaster.png" id="95_Ria, Torrentcaster" data-flag="@X" onclick="openSidebar('95_Ria, Torrentcaster',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\143_Stormgorge Calamity.png" id="143_Stormgorge Calamity" data-flag="@X" onclick="openSidebar('143_Stormgorge Calamity',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\185_Thunderplume Phoenix.png" id="185_Thunderplume Phoenix" data-flag="@X" onclick="openSidebar('185_Thunderplume Phoenix',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\216_Primeval Sandsifter.png" id="216_Primeval Sandsifter" data-flag="@X" onclick="openSidebar('216_Primeval Sandsifter',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\33_Caycross Loyalist.png" id="33_Caycross Loyalist" data-flag="@X" onclick="openSidebar('33_Caycross Loyalist',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\83_Floell, Seafoam Magister.png" id="83_Floell, Seafoam Magister" data-flag="@X" onclick="openSidebar('83_Floell, Seafoam Magister',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\111_Blinded Host.png" id="111_Blinded Host" data-flag="@X" onclick="openSidebar('111_Blinded Host',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\150_Brine-Bellied Guzzler.png" id="150_Brine-Bellied Guzzler" data-flag="@X" onclick="openSidebar('150_Brine-Bellied Guzzler',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\191_Awakened Isle.png" id="191_Awakened Isle" data-flag="@X" onclick="openSidebar('191_Awakened Isle',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\37_Demultian Border Enforcer.png" id="37_Demultian Border Enforcer" data-flag="@X" onclick="openSidebar('37_Demultian Border Enforcer',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\86_Horizons Mirror.png" id="86_Horizons Mirror" data-flag="@X" onclick="openSidebar('86_Horizons Mirror',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\119_Culling Mists.png" id="119_Culling Mists" data-flag="@X" onclick="openSidebar('119_Culling Mists',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\164_Flash Out.png" id="164_Flash Out" data-flag="@X" onclick="openSidebar('164_Flash Out',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\192_Bethan Braveheart, Sea Cavalier.png" id="192_Bethan Braveheart, Sea Cavalier" data-flag="@X" onclick="openSidebar('192_Bethan Braveheart, Sea Cavalier',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\48_Patron of The Damned.png" id="48_Patron of The Damned" data-flag="@X" onclick="openSidebar('48_Patron of The Damned',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\87_Imminent Storm.png" id="87_Imminent Storm" data-flag="@X" onclick="openSidebar('87_Imminent Storm',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\128_Feed The Beast.png" id="128_Feed The Beast" data-flag="@X" onclick="openSidebar('128_Feed The Beast',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\167_Frenetic Charge.png" id="167_Frenetic Charge" data-flag="@X" onclick="openSidebar('167_Frenetic Charge',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\197_Concealed Kelpie.png" id="197_Concealed Kelpie" data-flag="@X" onclick="openSidebar('197_Concealed Kelpie',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\50_Pirate Port.png" id="50_Pirate Port" data-flag="@X" onclick="openSidebar('50_Pirate Port',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\88_Karliah, Icecoil Illusionist.png" id="88_Karliah, Icecoil Illusionist" data-flag="@X" onclick="openSidebar('88_Karliah, Icecoil Illusionist',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\130_Huntsmaster of Demult.png" id="130_Huntsmaster of Demult" data-flag="@X" onclick="openSidebar('130_Huntsmaster of Demult',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\169_Ilis of Searing Melodies.png" id="169_Ilis of Searing Melodies" data-flag="@X" onclick="openSidebar('169_Ilis of Searing Melodies',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\207_Glimpse of Predation.png" id="207_Glimpse of Predation" data-flag="@X" onclick="openSidebar('207_Glimpse of Predation',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\54_Riptide.png" id="54_Riptide" data-flag="@X" onclick="openSidebar('54_Riptide',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\101_Shipwreck Seer.png" id="101_Shipwreck Seer" data-flag="@X" onclick="openSidebar('101_Shipwreck Seer',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\133_Lurtz, Caycross Cannoneer.png" id="133_Lurtz, Caycross Cannoneer" data-flag="@X" onclick="openSidebar('133_Lurtz, Caycross Cannoneer',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\170_Kore, Caycross Recruiter.png" id="170_Kore, Caycross Recruiter" data-flag="@X" onclick="openSidebar('170_Kore, Caycross Recruiter',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\218_Serpent Keeper.png" id="218_Serpent Keeper" data-flag="@X" onclick="openSidebar('218_Serpent Keeper',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\61_Soul Geyser.png" id="61_Soul Geyser" data-flag="@X" onclick="openSidebar('61_Soul Geyser',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\105_Temptress' Presence.png" id="105_Temptress Presence" data-flag="@X" onclick="openSidebar('105_Temptress Presence',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\135_Mindstinger.png" id="135_Mindstinger" data-flag="@X" onclick="openSidebar('135_Mindstinger',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\178_Soaring Breachborn.png" id="178_Soaring Breachborn" data-flag="@X" onclick="openSidebar('178_Soaring Breachborn',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\227_Wreckage Ambush.png" id="227_Wreckage Ambush" data-flag="@X" onclick="openSidebar('227_Wreckage Ambush',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\62_Stratoform Kraken.png" id="62_Stratoform Kraken" data-flag="@X" onclick="openSidebar('62_Stratoform Kraken',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\73_Bysian Exile.png" id="73_Bysian Exile" data-flag="@X" onclick="openSidebar('73_Bysian Exile',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\146_Thoughtlash Wretch.png" id="146_Thoughtlash Wretch" data-flag="@X" onclick="openSidebar('146_Thoughtlash Wretch',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\152_Bysbound Sea-Sovereign.png" id="152_Bysbound Sea-Sovereign" data-flag="@X" onclick="openSidebar('152_Bysbound Sea-Sovereign',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\228_Yasara, the Tamed Deep.png" id="228_Yasara, the Tamed Deep" data-flag="@X" onclick="openSidebar('228_Yasara, the Tamed Deep',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\32_Call the Tide.png" id="32_Call the Tide" data-flag="@X" onclick="openSidebar('32_Call the Tide',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\74_Captivating Illusion_back.png" alt="/sets\OBO-files\img\74_Captivating Illusion_front.png" id="74_Captivating Illusion" data-flag="@XD" onclick="openSidebar('74_Captivating Illusion',false)"><button class="flip-btn" onclick="imgFlip('74_Captivating Illusion')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\110_Abyssal Gaze.png" id="110_Abyssal Gaze" data-flag="@X" onclick="openSidebar('110_Abyssal Gaze',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\154_Chained Devilshark.png" id="154_Chained Devilshark" data-flag="@X" onclick="openSidebar('154_Chained Devilshark',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\196_Cargosplitter Kraken.png" id="196_Cargosplitter Kraken" data-flag="@X" onclick="openSidebar('196_Cargosplitter Kraken',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\38_Diurge, Northern Despot.png" id="38_Diurge, Northern Despot" data-flag="@X" onclick="openSidebar('38_Diurge, Northern Despot',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\75_Coastal Gaze.png" id="75_Coastal Gaze" data-flag="@X" onclick="openSidebar('75_Coastal Gaze',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\112_Blizzard Weaver.png" id="112_Blizzard Weaver" data-flag="@X" onclick="openSidebar('112_Blizzard Weaver',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\157_Crazed Elementalist_back.png" alt="/sets\OBO-files\img\157_Crazed Elementalist_front.png" id="157_Crazed Elementalist" data-flag="@XD" onclick="openSidebar('157_Crazed Elementalist',false)"><button class="flip-btn" onclick="imgFlip('157_Crazed Elementalist')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\198_Coralback Gorilla.png" id="198_Coralback Gorilla" data-flag="@X" onclick="openSidebar('198_Coralback Gorilla',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\39_Earthly Gaze.png" id="39_Earthly Gaze" data-flag="@X" onclick="openSidebar('39_Earthly Gaze',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\81_Devious Plotter.png" id="81_Devious Plotter" data-flag="@X" onclick="openSidebar('81_Devious Plotter',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\113_Blood In The Water.png" id="113_Blood In The Water" data-flag="@X" onclick="openSidebar('113_Blood In The Water',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\161_Eager Enlistment_back.png" alt="/sets\OBO-files\img\161_Eager Enlistment_front.png" id="161_Eager Enlistment" data-flag="@XD" onclick="openSidebar('161_Eager Enlistment',false)"><button class="flip-btn" onclick="imgFlip('161_Eager Enlistment')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\203_Dryad of The Sunlit Sea_back.png" alt="/sets\OBO-files\img\203_Dryad of The Sunlit Sea_front.png" id="203_Dryad of The Sunlit Sea" data-flag="@XD" onclick="openSidebar('203_Dryad of The Sunlit Sea',false)"><button class="flip-btn" onclick="imgFlip('203_Dryad of The Sunlit Sea')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\43_Icebreaker Whale.png" id="43_Icebreaker Whale" data-flag="@X" onclick="openSidebar('43_Icebreaker Whale',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\82_Duplicaster Mage.png" id="82_Duplicaster Mage" data-flag="@X" onclick="openSidebar('82_Duplicaster Mage',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\118_Corrupted Archpriest.png" id="118_Corrupted Archpriest" data-flag="@X" onclick="openSidebar('118_Corrupted Archpriest',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\163_Fault-Splitter Blade_back.png" alt="/sets\OBO-files\img\163_Fault-Splitter Blade_front.png" id="163_Fault-Splitter Blade" data-flag="@XD" onclick="openSidebar('163_Fault-Splitter Blade',false)"><button class="flip-btn" onclick="imgFlip('163_Fault-Splitter Blade')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\206_Floral Gaze.png" id="206_Floral Gaze" data-flag="@X" onclick="openSidebar('206_Floral Gaze',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\44_Inspiring Leader.png" id="44_Inspiring Leader" data-flag="@X" onclick="openSidebar('44_Inspiring Leader',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\85_Gaze into the Eye.png" id="85_Gaze into the Eye" data-flag="@X" onclick="openSidebar('85_Gaze into the Eye',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\122_Deck-Destroyer Octopus_back.png" alt="/sets\OBO-files\img\122_Deck-Destroyer Octopus_front.png" id="122_Deck-Destroyer Octopus" data-flag="@XD" onclick="openSidebar('122_Deck-Destroyer Octopus',false)"><button class="flip-btn" onclick="imgFlip('122_Deck-Destroyer Octopus')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\168_Ignite The Deck.png" id="168_Ignite The Deck" data-flag="@X" onclick="openSidebar('168_Ignite The Deck',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\209_Indominatable Yeti.png" id="209_Indominatable Yeti" data-flag="@X" onclick="openSidebar('209_Indominatable Yeti',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\47_Migrating Stoneback.png" id="47_Migrating Stoneback" data-flag="@X" onclick="openSidebar('47_Migrating Stoneback',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\93_Reef Worm.png" id="93_Reef Worm" data-flag="@X" onclick="openSidebar('93_Reef Worm',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\126_Demultian Pearldivers.png" id="126_Demultian Pearldivers" data-flag="@X" onclick="openSidebar('126_Demultian Pearldivers',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\175_Shipwreck Pillager.png" id="175_Shipwreck Pillager" data-flag="@X" onclick="openSidebar('175_Shipwreck Pillager',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\210_Lashweed Hydra.png" id="210_Lashweed Hydra" data-flag="@X" onclick="openSidebar('210_Lashweed Hydra',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\49_Pieces of Eight_back.png" alt="/sets\OBO-files\img\49_Pieces of Eight_front.png" id="49_Pieces of Eight" data-flag="@XD" onclick="openSidebar('49_Pieces of Eight',false)"><button class="flip-btn" onclick="imgFlip('49_Pieces of Eight')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\96_Rivulet Trawlers_back.png" alt="/sets\OBO-files\img\96_Rivulet Trawlers_front.png" id="96_Rivulet Trawlers" data-flag="@XD" onclick="openSidebar('96_Rivulet Trawlers',false)"><button class="flip-btn" onclick="imgFlip('96_Rivulet Trawlers')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\127_Dredge From The Locker.png" id="127_Dredge From The Locker" data-flag="@X" onclick="openSidebar('127_Dredge From The Locker',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\176_Siltwing Provoker.png" id="176_Siltwing Provoker" data-flag="@X" onclick="openSidebar('176_Siltwing Provoker',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\213_Nurturing Eelbinder.png" id="213_Nurturing Eelbinder" data-flag="@X" onclick="openSidebar('213_Nurturing Eelbinder',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\55_Safeguard the Surface.png" id="55_Safeguard the Surface" data-flag="@X" onclick="openSidebar('55_Safeguard the Surface',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\97_Sap.png" id="97_Sap" data-flag="@X" onclick="openSidebar('97_Sap',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\134_Magmatic Chasmspawn_back.png" alt="/sets\OBO-files\img\134_Magmatic Chasmspawn_front.png" id="134_Magmatic Chasmspawn" data-flag="@XD" onclick="openSidebar('134_Magmatic Chasmspawn',false)"><button class="flip-btn" onclick="imgFlip('134_Magmatic Chasmspawn')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\180_Sudden Eruption.png" id="180_Sudden Eruption" data-flag="@X" onclick="openSidebar('180_Sudden Eruption',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\215_Playful Pair.png" id="215_Playful Pair" data-flag="@X" onclick="openSidebar('215_Playful Pair',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\56_Seaglide Champion_back.png" alt="/sets\OBO-files\img\56_Seaglide Champion_front.png" id="56_Seaglide Champion" data-flag="@XD" onclick="openSidebar('56_Seaglide Champion',false)"><button class="flip-btn" onclick="imgFlip('56_Seaglide Champion')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\99_Serpent Hunter.png" id="99_Serpent Hunter" data-flag="@X" onclick="openSidebar('99_Serpent Hunter',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\136_Perfect Storm.png" id="136_Perfect Storm" data-flag="@X" onclick="openSidebar('136_Perfect Storm',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\186_Urce, Decorated Frenzycaller.png" id="186_Urce, Decorated Frenzycaller" data-flag="@X" onclick="openSidebar('186_Urce, Decorated Frenzycaller',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\221_Sprouting Seahorse.png" id="221_Sprouting Seahorse" data-flag="@X" onclick="openSidebar('221_Sprouting Seahorse',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\66_Symbioctopus.png" id="66_Symbioctopus" data-flag="@X" onclick="openSidebar('66_Symbioctopus',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\107_Tidal Manipulator.png" id="107_Tidal Manipulator" data-flag="@X" onclick="openSidebar('107_Tidal Manipulator',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\141_Skull Crab.png" id="141_Skull Crab" data-flag="@X" onclick="openSidebar('141_Skull Crab',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\187_Volcanic Gaze.png" id="187_Volcanic Gaze" data-flag="@X" onclick="openSidebar('187_Volcanic Gaze',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\223_Swarmtail Siren_back.png" alt="/sets\OBO-files\img\223_Swarmtail Siren_front.png" id="223_Swarmtail Siren" data-flag="@XD" onclick="openSidebar('223_Swarmtail Siren',false)"><button class="flip-btn" onclick="imgFlip('223_Swarmtail Siren')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\31_Brine Blight.png" id="31_Brine Blight" data-flag="@X" onclick="openSidebar('31_Brine Blight',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\109_Use As Bait.png" id="109_Use As Bait" data-flag="@X" onclick="openSidebar('109_Use As Bait',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\148_Tide Scuttler.png" id="148_Tide Scuttler" data-flag="@X" onclick="openSidebar('148_Tide Scuttler',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\151_Burning Sky.png" id="151_Burning Sky" data-flag="@X" onclick="openSidebar('151_Burning Sky',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\224_Thriving Ecosystem.png" id="224_Thriving Ecosystem" data-flag="@X" onclick="openSidebar('224_Thriving Ecosystem',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\34_Constrict.png" id="34_Constrict" data-flag="@X" onclick="openSidebar('34_Constrict',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\71_Benthic Overlord.png" id="71_Benthic Overlord" data-flag="@X" onclick="openSidebar('71_Benthic Overlord',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\114_Blood-Gorged Leech_back.png" alt="/sets\OBO-files\img\114_Blood-Gorged Leech_front.png" id="114_Blood-Gorged Leech" data-flag="@XD" onclick="openSidebar('114_Blood-Gorged Leech',false)"><button class="flip-btn" onclick="imgFlip('114_Blood-Gorged Leech')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\153_Bysian Brute.png" id="153_Bysian Brute" data-flag="@X" onclick="openSidebar('153_Bysian Brute',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\225_Whalesong Invoker.png" id="225_Whalesong Invoker" data-flag="@X" onclick="openSidebar('225_Whalesong Invoker',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\35_Darian Lenz, First Mate_back.png" alt="/sets\OBO-files\img\35_Darian Lenz, First Mate_front.png" id="35_Darian Lenz, First Mate" data-flag="@XD" onclick="openSidebar('35_Darian Lenz, First Mate',false)"><button class="flip-btn" onclick="imgFlip('35_Darian Lenz, First Mate')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\72_Brine Hopper.png" id="72_Brine Hopper" data-flag="@X" onclick="openSidebar('72_Brine Hopper',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\115_Caycross Hexbearer.png" id="115_Caycross Hexbearer" data-flag="@X" onclick="openSidebar('115_Caycross Hexbearer',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\155_Co-ordinated Kill.png" id="155_Co-ordinated Kill" data-flag="@X" onclick="openSidebar('155_Co-ordinated Kill',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\189_Ancient Stirrings.png" id="189_Ancient Stirrings" data-flag="@X" onclick="openSidebar('189_Ancient Stirrings',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\36_Deep-Sea Deckhand.png" id="36_Deep-Sea Deckhand" data-flag="@X" onclick="openSidebar('36_Deep-Sea Deckhand',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\77_Countercurrent.png" id="77_Countercurrent" data-flag="@X" onclick="openSidebar('77_Countercurrent',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\116_Cheat The Fleet.png" id="116_Cheat The Fleet" data-flag="@X" onclick="openSidebar('116_Cheat The Fleet',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\156_Commanding shout.png" id="156_Commanding shout" data-flag="@X" onclick="openSidebar('156_Commanding shout',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\190_Arduous Growth.png" id="190_Arduous Growth" data-flag="@X" onclick="openSidebar('190_Arduous Growth',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\40_Flash of Steel.png" id="40_Flash of Steel" data-flag="@X" onclick="openSidebar('40_Flash of Steel',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\79_Current Shaper.png" id="79_Current Shaper" data-flag="@X" onclick="openSidebar('79_Current Shaper',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\117_Consuming Image.png" id="117_Consuming Image" data-flag="@X" onclick="openSidebar('117_Consuming Image',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\158_Curioctopus.png" id="158_Curioctopus" data-flag="@X" onclick="openSidebar('158_Curioctopus',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\193_Bite From Below.png" id="193_Bite From Below" data-flag="@X" onclick="openSidebar('193_Bite From Below',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\41_Flockray.png" id="41_Flockray" data-flag="@X" onclick="openSidebar('41_Flockray',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\80_Dazzling Quetzal.png" id="80_Dazzling Quetzal" data-flag="@X" onclick="openSidebar('80_Dazzling Quetzal',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\120_Curse of The Black Spot.png" id="120_Curse of The Black Spot" data-flag="@X" onclick="openSidebar('120_Curse of The Black Spot',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\159_Determined Deckhand.png" id="159_Determined Deckhand" data-flag="@X" onclick="openSidebar('159_Determined Deckhand',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\194_Bounding Dolphin.png" id="194_Bounding Dolphin" data-flag="@X" onclick="openSidebar('194_Bounding Dolphin',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\45_Leech Fish.png" id="45_Leech Fish" data-flag="@X" onclick="openSidebar('45_Leech Fish',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\84_Flying Fish.png" id="84_Flying Fish" data-flag="@X" onclick="openSidebar('84_Flying Fish',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\121_Cursed Sea Dog.png" id="121_Cursed Sea Dog" data-flag="@X" onclick="openSidebar('121_Cursed Sea Dog',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\160_Dymantis Shrimp.png" id="160_Dymantis Shrimp" data-flag="@X" onclick="openSidebar('160_Dymantis Shrimp',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\195_Brine-Spray Serpent.png" id="195_Brine-Spray Serpent" data-flag="@X" onclick="openSidebar('195_Brine-Spray Serpent',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\46_Lungefish.png" id="46_Lungefish" data-flag="@X" onclick="openSidebar('46_Lungefish',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\89_Mind-Flood Hexapod.png" id="89_Mind-Flood Hexapod" data-flag="@X" onclick="openSidebar('89_Mind-Flood Hexapod',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\123_Decorated Quartermaster.png" id="123_Decorated Quartermaster" data-flag="@X" onclick="openSidebar('123_Decorated Quartermaster',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\165_Flighty Companion.png" id="165_Flighty Companion" data-flag="@X" onclick="openSidebar('165_Flighty Companion',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\199_Coraline Wurmtamer_back.png" alt="/sets\OBO-files\img\199_Coraline Wurmtamer_front.png" id="199_Coraline Wurmtamer" data-flag="@XD" onclick="openSidebar('199_Coraline Wurmtamer',false)"><button class="flip-btn" onclick="imgFlip('199_Coraline Wurmtamer')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\51_Powder Monkeys.png" id="51_Powder Monkeys" data-flag="@X" onclick="openSidebar('51_Powder Monkeys',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\90_Opt.png" id="90_Opt" data-flag="@X" onclick="openSidebar('90_Opt',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\124_Deepmaw Predator.png" id="124_Deepmaw Predator" data-flag="@X" onclick="openSidebar('124_Deepmaw Predator',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\166_Flotsam Finder_back.png" alt="/sets\OBO-files\img\166_Flotsam Finder_front.png" id="166_Flotsam Finder" data-flag="@XD" onclick="openSidebar('166_Flotsam Finder',false)"><button class="flip-btn" onclick="imgFlip('166_Flotsam Finder')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\201_Demultian Trident.png" id="201_Demultian Trident" data-flag="@X" onclick="openSidebar('201_Demultian Trident',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\52_Reef Host.png" id="52_Reef Host" data-flag="@X" onclick="openSidebar('52_Reef Host',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\91_Quell.png" id="91_Quell" data-flag="@X" onclick="openSidebar('91_Quell',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\129_Fleet Mutineer.png" id="129_Fleet Mutineer" data-flag="@X" onclick="openSidebar('129_Fleet Mutineer',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\171_Kraken Flare.png" id="171_Kraken Flare" data-flag="@X" onclick="openSidebar('171_Kraken Flare',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\202_Druid of The Deep.png" id="202_Druid of The Deep" data-flag="@X" onclick="openSidebar('202_Druid of The Deep',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\53_Rigging Duelist.png" id="53_Rigging Duelist" data-flag="@X" onclick="openSidebar('53_Rigging Duelist',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\92_Rapid Carcinisation.png" id="92_Rapid Carcinisation" data-flag="@X" onclick="openSidebar('92_Rapid Carcinisation',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\132_Lost At Sea.png" id="132_Lost At Sea" data-flag="@X" onclick="openSidebar('132_Lost At Sea',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\172_Magmatic Downpour.png" id="172_Magmatic Downpour" data-flag="@X" onclick="openSidebar('172_Magmatic Downpour',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\204_Escort.png" id="204_Escort" data-flag="@X" onclick="openSidebar('204_Escort',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\57_Shoaling Trout.png" id="57_Shoaling Trout" data-flag="@X" onclick="openSidebar('57_Shoaling Trout',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\94_Reefback Crab.png" id="94_Reefback Crab" data-flag="@X" onclick="openSidebar('94_Reefback Crab',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\137_Raid The Coffers.png" id="137_Raid The Coffers" data-flag="@X" onclick="openSidebar('137_Raid The Coffers',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\173_Momentary Peace.png" id="173_Momentary Peace" data-flag="@X" onclick="openSidebar('173_Momentary Peace',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\205_Fickle Reefmane.png" id="205_Fickle Reefmane" data-flag="@X" onclick="openSidebar('205_Fickle Reefmane',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\58_Shrimp Dragoon.png" id="58_Shrimp Dragoon" data-flag="@X" onclick="openSidebar('58_Shrimp Dragoon',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\98_Seafaring Gulls_back.png" alt="/sets\OBO-files\img\98_Seafaring Gulls_front.png" id="98_Seafaring Gulls" data-flag="@XD" onclick="openSidebar('98_Seafaring Gulls',false)"><button class="flip-btn" onclick="imgFlip('98_Seafaring Gulls')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\138_Run Aground.png" id="138_Run Aground" data-flag="@X" onclick="openSidebar('138_Run Aground',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\174_Reckless Slink.png" id="174_Reckless Slink" data-flag="@X" onclick="openSidebar('174_Reckless Slink',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\208_Hunting Seal_back.png" alt="/sets\OBO-files\img\208_Hunting Seal_front.png" id="208_Hunting Seal" data-flag="@XD" onclick="openSidebar('208_Hunting Seal',false)"><button class="flip-btn" onclick="imgFlip('208_Hunting Seal')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\60_Skytide Coronate.png" id="60_Skytide Coronate" data-flag="@X" onclick="openSidebar('60_Skytide Coronate',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\100_Shifting Seashade.png" id="100_Shifting Seashade" data-flag="@X" onclick="openSidebar('100_Shifting Seashade',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\139_Shaka's Silencer.png" id="139_Shakas Silencer" data-flag="@X" onclick="openSidebar('139_Shakas Silencer',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\177_Skulldweller Hermit_back.png" alt="/sets\OBO-files\img\177_Skulldweller Hermit_front.png" id="177_Skulldweller Hermit" data-flag="@XD" onclick="openSidebar('177_Skulldweller Hermit',false)"><button class="flip-btn" onclick="imgFlip('177_Skulldweller Hermit')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\211_Lingering Nightmaw.png" id="211_Lingering Nightmaw" data-flag="@X" onclick="openSidebar('211_Lingering Nightmaw',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\63_Sunken Terror_back.png" alt="/sets\OBO-files\img\63_Sunken Terror_front.png" id="63_Sunken Terror" data-flag="@XD" onclick="openSidebar('63_Sunken Terror',false)"><button class="flip-btn" onclick="imgFlip('63_Sunken Terror')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\102_Shore Walker.png" id="102_Shore Walker" data-flag="@X" onclick="openSidebar('102_Shore Walker',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\140_Shimmerskate.png" id="140_Shimmerskate" data-flag="@X" onclick="openSidebar('140_Shimmerskate',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\179_Staghorned Crawler.png" id="179_Staghorned Crawler" data-flag="@X" onclick="openSidebar('179_Staghorned Crawler',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\212_Lose To Time.png" id="212_Lose To Time" data-flag="@X" onclick="openSidebar('212_Lose To Time',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\64_Supportive Captain.png" id="64_Supportive Captain" data-flag="@X" onclick="openSidebar('64_Supportive Captain',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\103_Sluicing Wave.png" id="103_Sluicing Wave" data-flag="@X" onclick="openSidebar('103_Sluicing Wave',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\142_Soul Dredge.png" id="142_Soul Dredge" data-flag="@X" onclick="openSidebar('142_Soul Dredge',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\181_Tentacled Egg.png" id="181_Tentacled Egg" data-flag="@X" onclick="openSidebar('181_Tentacled Egg',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\217_Sailor's End.png" id="217_Sailors End" data-flag="@X" onclick="openSidebar('217_Sailors End',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\65_Swiftcurrent Swimmer.png" id="65_Swiftcurrent Swimmer" data-flag="@X" onclick="openSidebar('65_Swiftcurrent Swimmer',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\104_Sonorous Siren.png" id="104_Sonorous Siren" data-flag="@X" onclick="openSidebar('104_Sonorous Siren',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\144_Sullen Selkie.png" id="144_Sullen Selkie" data-flag="@X" onclick="openSidebar('144_Sullen Selkie',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\182_Territorial Mawmother.png" id="182_Territorial Mawmother" data-flag="@X" onclick="openSidebar('182_Territorial Mawmother',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\219_Shattershore Hunter.png" id="219_Shattershore Hunter" data-flag="@X" onclick="openSidebar('219_Shattershore Hunter',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\67_Territorial Wavebreaker.png" id="67_Territorial Wavebreaker" data-flag="@X" onclick="openSidebar('67_Territorial Wavebreaker',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\106_Thirst For Company.png" id="106_Thirst For Company" data-flag="@X" onclick="openSidebar('106_Thirst For Company',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\145_Swarm Crow.png" id="145_Swarm Crow" data-flag="@X" onclick="openSidebar('145_Swarm Crow',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\188_West Wind Muse_back.png" alt="/sets\OBO-files\img\188_West Wind Muse_front.png" id="188_West Wind Muse" data-flag="@XD" onclick="openSidebar('188_West Wind Muse',false)"><button class="flip-btn" onclick="imgFlip('188_West Wind Muse')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\220_Smuggler's route.png" id="220_Smugglers route" data-flag="@X" onclick="openSidebar('220_Smugglers route',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\68_Thaw.png" id="68_Thaw" data-flag="@X" onclick="openSidebar('68_Thaw',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\108_Trap In A Bubble.png" id="108_Trap In A Bubble" data-flag="@X" onclick="openSidebar('108_Trap In A Bubble',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\147_Throw Overboard.png" id="147_Throw Overboard" data-flag="@X" onclick="openSidebar('147_Throw Overboard',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\222_Stalking Pines.png" id="222_Stalking Pines" data-flag="@X" onclick="openSidebar('222_Stalking Pines',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\69_Wavebreak Armour.png" id="69_Wavebreak Armour" data-flag="@X" onclick="openSidebar('69_Wavebreak Armour',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\149_Wailing Spirit.png" id="149_Wailing Spirit" data-flag="@X" onclick="openSidebar('149_Wailing Spirit',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\226_Withdrawn Moray.png" id="226_Withdrawn Moray" data-flag="@X" onclick="openSidebar('226_Withdrawn Moray',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="gold" class="anchor"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\229_Storm's Benediction.png" id="229_Storms Benediction" data-flag="@X" onclick="openSidebar('229_Storms Benediction',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\232_Nikas of The Dead Three.png" id="232_Nikas of The Dead Three" data-flag="@X" onclick="openSidebar('232_Nikas of The Dead Three',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\236_Shaka of The Dead Three.png" id="236_Shaka of The Dead Three" data-flag="@X" onclick="openSidebar('236_Shaka of The Dead Three',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\238_Sethis Karr_back.png" alt="/sets\OBO-files\img\238_Sethis Karr_front.png" id="238_Sethis Karr" data-flag="@XD" onclick="openSidebar('238_Sethis Karr',false)"><button class="flip-btn" onclick="imgFlip('238_Sethis Karr')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\241_Socolia, Coral Crowned.png" id="241_Socolia, Coral Crowned" data-flag="@X" onclick="openSidebar('241_Socolia, Coral Crowned',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\230_Vorbes, Caliphid Consort.png" id="230_Vorbes, Caliphid Consort" data-flag="@X" onclick="openSidebar('230_Vorbes, Caliphid Consort',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\233_Wash Under.png" id="233_Wash Under" data-flag="@X" onclick="openSidebar('233_Wash Under',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\235_Great Wight Shark.png" id="235_Great Wight Shark" data-flag="@X" onclick="openSidebar('235_Great Wight Shark',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\239_Stoneshell Terror.png" id="239_Stoneshell Terror" data-flag="@X" onclick="openSidebar('239_Stoneshell Terror',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\240_Fathomlight Dragoon of Bys.png" id="240_Fathomlight Dragoon of Bys" data-flag="@X" onclick="openSidebar('240_Fathomlight Dragoon of Bys',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\234_What Lies Above_back.png" alt="/sets\OBO-files\img\234_What Lies Above_front.png" id="234_What Lies Above" data-flag="@XD" onclick="openSidebar('234_What Lies Above',false)"><button class="flip-btn" onclick="imgFlip('234_What Lies Above')"></button></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\237_Burgeoning Shoalseeker.png" id="237_Burgeoning Shoalseeker" data-flag="@X" onclick="openSidebar('237_Burgeoning Shoalseeker',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\231_Drownyard Wraith.png" id="231_Drownyard Wraith" data-flag="@X" onclick="openSidebar('231_Drownyard Wraith',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\243_Haslan of The Dead Three.png" id="243_Haslan of The Dead Three" data-flag="@X" onclick="openSidebar('243_Haslan of The Dead Three',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\244_Broken Reef Archangel_back.png" alt="/sets\OBO-files\img\244_Broken Reef Archangel_front.png" id="244_Broken Reef Archangel" data-flag="@XD" onclick="openSidebar('244_Broken Reef Archangel',false)"><button class="flip-btn" onclick="imgFlip('244_Broken Reef Archangel')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\247_Invocation of Adreia.png" id="247_Invocation of Adreia" data-flag="@X" onclick="openSidebar('247_Invocation of Adreia',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\248_Dephia, Genius Hygronomist.png" id="248_Dephia, Genius Hygronomist" data-flag="@X" onclick="openSidebar('248_Dephia, Genius Hygronomist',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\250_Adreia, God of the Deep.png" id="250_Adreia, God of the Deep" data-flag="@X" onclick="openSidebar('250_Adreia, God of the Deep',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\242_Barossa, Caycross Captain.png" id="242_Barossa, Caycross Captain" data-flag="@X" onclick="openSidebar('242_Barossa, Caycross Captain',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\245_Capricious Wyvern.png" id="245_Capricious Wyvern" data-flag="@X" onclick="openSidebar('245_Capricious Wyvern',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\246_Alluring Lamplighter.png" id="246_Alluring Lamplighter" data-flag="@X" onclick="openSidebar('246_Alluring Lamplighter',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\249_Shattershell Patriarch.png" id="249_Shattershell Patriarch" data-flag="@X" onclick="openSidebar('249_Shattershell Patriarch',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\251_Cyclonic Aid.png" id="251_Cyclonic Aid" data-flag="@X" onclick="openSidebar('251_Cyclonic Aid',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\254_Kiora, The Rising Tide.png" id="254_Kiora, The Rising Tide" data-flag="@X" onclick="openSidebar('254_Kiora, The Rising Tide',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\252_Broadside Boarding.png" id="252_Broadside Boarding" data-flag="@X" onclick="openSidebar('252_Broadside Boarding',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\255_Sadhi of The Reefs.png" id="255_Sadhi of The Reefs" data-flag="@X" onclick="openSidebar('255_Sadhi of The Reefs',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\253_Heva Jupta, The Faceless.png" id="253_Heva Jupta, The Faceless" data-flag="@X" onclick="openSidebar('253_Heva Jupta, The Faceless',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="colorless" class="anchor"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\4_The Beast Beneath.png" id="4_The Beast Beneath" data-flag="@X" onclick="openSidebar('4_The Beast Beneath',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\5_Blizzard Tyrant.png" id="5_Blizzard Tyrant" data-flag="@X" onclick="openSidebar('5_Blizzard Tyrant',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\8_Cryostasis.png" id="8_Cryostasis" data-flag="@X" onclick="openSidebar('8_Cryostasis',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\258_The Heart of Gelvun.png" id="258_The Heart of Gelvun" data-flag="@X" onclick="openSidebar('258_The Heart of Gelvun',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\6_Boreal Current.png" id="6_Boreal Current" data-flag="@X" onclick="openSidebar('6_Boreal Current',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\12_Gabrial, Lynx Rider.png" id="12_Gabrial, Lynx Rider" data-flag="@X" onclick="openSidebar('12_Gabrial, Lynx Rider',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\14_Hoargeist.png" id="14_Hoargeist" data-flag="@X" onclick="openSidebar('14_Hoargeist',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\24_Shattering Monodon.png" id="24_Shattering Monodon" data-flag="@X" onclick="openSidebar('24_Shattering Monodon',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\25_Shimmercoil.png" id="25_Shimmercoil" data-flag="@X" onclick="openSidebar('25_Shimmercoil',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\256_Entrancing Anchor.png" id="256_Entrancing Anchor" data-flag="@X" onclick="openSidebar('256_Entrancing Anchor',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\260_The Left Eye of Gelvun.png" id="260_The Left Eye of Gelvun" data-flag="@X" onclick="openSidebar('260_The Left Eye of Gelvun',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\262_The Right Eye of Gelvun.png" id="262_The Right Eye of Gelvun" data-flag="@X" onclick="openSidebar('262_The Right Eye of Gelvun',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\3_Atlan Rimestrider.png" id="3_Atlan Rimestrider" data-flag="@X" onclick="openSidebar('3_Atlan Rimestrider',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\10_Frost Form.png" id="10_Frost Form" data-flag="@X" onclick="openSidebar('10_Frost Form',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\11_Frostbite Demon.png" id="11_Frostbite Demon" data-flag="@X" onclick="openSidebar('11_Frostbite Demon',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\15_Icecore Archer.png" id="15_Icecore Archer" data-flag="@X" onclick="openSidebar('15_Icecore Archer',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\18_Mana Shatter.png" id="18_Mana Shatter" data-flag="@X" onclick="openSidebar('18_Mana Shatter',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\22_Shardpelt Wolf.png" id="22_Shardpelt Wolf" data-flag="@X" onclick="openSidebar('22_Shardpelt Wolf',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\28_Timeless Whispers.png" id="28_Timeless Whispers" data-flag="@X" onclick="openSidebar('28_Timeless Whispers',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\259_Icy Manipulator.png" id="259_Icy Manipulator" data-flag="@X" onclick="openSidebar('259_Icy Manipulator',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\261_Opaline Coral.png" id="261_Opaline Coral" data-flag="@X" onclick="openSidebar('261_Opaline Coral',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\1_Arctic Cairnwalker.png" id="1_Arctic Cairnwalker" data-flag="@X" onclick="openSidebar('1_Arctic Cairnwalker',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\2_Atlan Caller.png" id="2_Atlan Caller" data-flag="@X" onclick="openSidebar('2_Atlan Caller',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\7_Coiled Snowscale.png" id="7_Coiled Snowscale" data-flag="@X" onclick="openSidebar('7_Coiled Snowscale',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\9_Freeze Over.png" id="9_Freeze Over" data-flag="@X" onclick="openSidebar('9_Freeze Over',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\13_Glacial Weird.png" id="13_Glacial Weird" data-flag="@X" onclick="openSidebar('13_Glacial Weird',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\16_Icepaw Drake.png" id="16_Icepaw Drake" data-flag="@X" onclick="openSidebar('16_Icepaw Drake',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\17_Land Grasp.png" id="17_Land Grasp" data-flag="@X" onclick="openSidebar('17_Land Grasp',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\19_Plumb The Depths.png" id="19_Plumb The Depths" data-flag="@X" onclick="openSidebar('19_Plumb The Depths',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\20_Reawaken.png" id="20_Reawaken" data-flag="@X" onclick="openSidebar('20_Reawaken',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\21_Rime Wraith.png" id="21_Rime Wraith" data-flag="@X" onclick="openSidebar('21_Rime Wraith',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\23_Shattered Icefield.png" id="23_Shattered Icefield" data-flag="@X" onclick="openSidebar('23_Shattered Icefield',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\26_Ship Sextant.png" id="26_Ship Sextant" data-flag="@X" onclick="openSidebar('26_Ship Sextant',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\27_Stampeding Pinetusk.png" id="27_Stampeding Pinetusk" data-flag="@X" onclick="openSidebar('27_Stampeding Pinetusk',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\29_Touch of Gelvun.png" id="29_Touch of Gelvun" data-flag="@X" onclick="openSidebar('29_Touch of Gelvun',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\30_Windchill Giant.png" id="30_Windchill Giant" data-flag="@X" onclick="openSidebar('30_Windchill Giant',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\257_Frozen Signet.png" id="257_Frozen Signet" data-flag="@X" onclick="openSidebar('257_Frozen Signet',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\263_Ship Cannon.png" id="263_Ship Cannon" data-flag="@X" onclick="openSidebar('263_Ship Cannon',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\264_Trawler Net.png" id="264_Trawler Net" data-flag="@X" onclick="openSidebar('264_Trawler Net',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="land" class="anchor"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\287_Windbrisk Islet.png" id="287_Windbrisk Islet" data-flag="@X" onclick="openSidebar('287_Windbrisk Islet',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\284_Sunken Shelldock.png" id="284_Sunken Shelldock" data-flag="@X" onclick="openSidebar('284_Sunken Shelldock',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\275_Howltooth Bay.png" id="275_Howltooth Bay" data-flag="@X" onclick="openSidebar('275_Howltooth Bay',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\281_Spinerock Shallows.png" id="281_Spinerock Shallows" data-flag="@X" onclick="openSidebar('281_Spinerock Shallows',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\278_Mosswort Deep.png" id="278_Mosswort Deep" data-flag="@X" onclick="openSidebar('278_Mosswort Deep',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\283_Sunbleached Shore.png" id="283_Sunbleached Shore" data-flag="@X" onclick="openSidebar('283_Sunbleached Shore',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\282_Stormwrack Seas.png" id="282_Stormwrack Seas" data-flag="@X" onclick="openSidebar('282_Stormwrack Seas',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\279_Rotten Trench.png" id="279_Rotten Trench" data-flag="@X" onclick="openSidebar('279_Rotten Trench',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\286_Volatile Cavern.png" id="286_Volatile Cavern" data-flag="@X" onclick="openSidebar('286_Volatile Cavern',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\285_Viridian Cliffs.png" id="285_Viridian Cliffs" data-flag="@X" onclick="openSidebar('285_Viridian Cliffs',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\276_The Ice Fang Spires.png" id="276_The Ice Fang Spires" data-flag="@X" onclick="openSidebar('276_The Ice Fang Spires',false)"></div>
+			<div class="container"><img alt="/sets\OBO-files\img\277_Ice Floe Oasis.png" id="277_Ice Floe Oasis" data-flag="@X" onclick="openSidebar('277_Ice Floe Oasis',false)"></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\265_Frozen Caverns_back.png" alt="/sets\OBO-files\img\265_Frozen Caverns_front.png" id="265_Frozen Caverns" data-flag="@XD" onclick="openSidebar('265_Frozen Caverns',false)"><button class="flip-btn" onclick="imgFlip('265_Frozen Caverns')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\266_Frozen Crevasse_back.png" alt="/sets\OBO-files\img\266_Frozen Crevasse_front.png" id="266_Frozen Crevasse" data-flag="@XD" onclick="openSidebar('266_Frozen Crevasse',false)"><button class="flip-btn" onclick="imgFlip('266_Frozen Crevasse')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\267_Frozen Depths_back.png" alt="/sets\OBO-files\img\267_Frozen Depths_front.png" id="267_Frozen Depths" data-flag="@XD" onclick="openSidebar('267_Frozen Depths',false)"><button class="flip-btn" onclick="imgFlip('267_Frozen Depths')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\268_Frozen Isle_back.png" alt="/sets\OBO-files\img\268_Frozen Isle_front.png" id="268_Frozen Isle" data-flag="@XD" onclick="openSidebar('268_Frozen Isle',false)"><button class="flip-btn" onclick="imgFlip('268_Frozen Isle')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\269_Frozen Oceans_back.png" alt="/sets\OBO-files\img\269_Frozen Oceans_front.png" id="269_Frozen Oceans" data-flag="@XD" onclick="openSidebar('269_Frozen Oceans',false)"><button class="flip-btn" onclick="imgFlip('269_Frozen Oceans')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\270_Frozen Overhang_back.png" alt="/sets\OBO-files\img\270_Frozen Overhang_front.png" id="270_Frozen Overhang" data-flag="@XD" onclick="openSidebar('270_Frozen Overhang',false)"><button class="flip-btn" onclick="imgFlip('270_Frozen Overhang')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\271_Frozen Reef_back.png" alt="/sets\OBO-files\img\271_Frozen Reef_front.png" id="271_Frozen Reef" data-flag="@XD" onclick="openSidebar('271_Frozen Reef',false)"><button class="flip-btn" onclick="imgFlip('271_Frozen Reef')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\272_Frozen Spires_back.png" alt="/sets\OBO-files\img\272_Frozen Spires_front.png" id="272_Frozen Spires" data-flag="@XD" onclick="openSidebar('272_Frozen Spires',false)"><button class="flip-btn" onclick="imgFlip('272_Frozen Spires')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\273_Frozen Towers_back.png" alt="/sets\OBO-files\img\273_Frozen Towers_front.png" id="273_Frozen Towers" data-flag="@XD" onclick="openSidebar('273_Frozen Towers',false)"><button class="flip-btn" onclick="imgFlip('273_Frozen Towers')"></button></div>
+			<div class="container"><img data-alt_src="/sets\OBO-files\img\274_Frozen Vinefield_back.png" alt="/sets\OBO-files\img\274_Frozen Vinefield_front.png" id="274_Frozen Vinefield" data-flag="@XD" onclick="openSidebar('274_Frozen Vinefield',false)"><button class="flip-btn" onclick="imgFlip('274_Frozen Vinefield')"></button></div>
+			<div class="container"><img alt="/sets\OBO-files\img\280_Shipwreck Reef.png" id="280_Shipwreck Reef" data-flag="@X" onclick="openSidebar('280_Shipwreck Reef',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+	</div>
+</div>
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-container">
+			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
+			<img id="sidebar_h_img" class="sidebar-h-img">
+			<button class="flip-btn" id="sidebar-flip-btn" onclick="imgFlip('sidebar_img')"></button>
+		</div>
+		<button class="close-btn" onclick="closeSidebar()"></button>
+	</div>
+	<div class="footer"></div>
+
+	<script>
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+		let specialchars = "";
+
+	document.addEventListener('DOMContentLoaded', async function() {
+		await fetch('/lists/all-cards.json')
+					.then(response => response.json())
+					.then(json => {
+						card_list = json;
+				}).catch(error => console.error('Error:', error));
+
+				await fetch('/resources/replacechars.txt')
+					.then(response => response.text())
+					.then(text => {
+						specialchars = text; 
+				}).catch(error => console.error('Error:', error));
+
+				card_list_arrayified = card_list.cards;
+
+		preloadImgs = document.getElementsByClassName('preload-hidden');
+		
+		let images_loaded = [];
+
+		do {
+			await delay(100);
+			images_loaded = []
+			for (const img of preloadImgs)
+			{
+				images_loaded.push(isImageOk(img));
+			}
+		}
+		while (images_loaded.includes(false));
+
+		
+		loadImages();
+	});
+
+	function isImageOk(img) {
+		if (!img.complete || img.naturalWidth == 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function loadImages() {
+		const images = document.querySelectorAll('.grid-container img');
+
+		images.forEach(img => {
+			const flag = img.getAttribute('data-flag');
+
+			if (flag === '@N') {
+				img.src = '/img/card_back.png';
+				img.removeAttribute("onclick");
+				img.style.cursor = 'default';
+			}
+			else
+			{
+				img.src = img.alt;
+
+				if (flag === '@E') {
+					img.removeAttribute("onclick");
+					img.style.cursor = 'default';
+				}
+			}
+
+			img.style.visibility = 'visible';
+		});
+	}
+
+	window.addEventListener('resize', function(event) {
+		setSidebarTop();
+	}, true);
+
+	function setSidebarTop() {
+		let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+		let sh = document.getElementById('sidebar').offsetHeight;
+		let height = 100 * ((vh - sh) / 2) / vh;
+		document.getElementById('sidebar').style.top = height + '%';
+	}
+
+	let horizontal = false;
+
+	function imgFlip(num) {
+		tmp = document.getElementById(num).src;
+		console.log(num);
+		document.getElementById(num).src = document.getElementById(num).dataset.alt_src;
+		document.getElementById(num).dataset.alt_src = tmp;
+
+		if (num == 'sidebar_img')
+		{
+			const rotated_img = document.getElementById('sidebar_h_img');
+			const sidebar_img = document.getElementById('sidebar_img');
+
+			if (horizontal && rotated_img.style.display == 'none')
+			{
+				rotated_img.style.display = "block";
+				sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+			}
+			else
+			{
+				rotated_img.style.display = "none";
+				sidebar_img.style.filter = "";
+			}
+		}
+	}
+
+	function openSidebar(id, h = false) {
+		horizontal = h;
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+		
+		document.getElementById('sidebar').style.display = 'grid';
+
+		const rotated_img = document.getElementById('sidebar_h_img');
+		const sidebar_img = document.getElementById('sidebar_img');
+
+		sidebar_img.src = document.getElementById(id).src;
+		rotated_img.src = document.getElementById(id).src.replace("_back", "_front");
+
+		if (horizontal && !sidebar_img.src.includes("_back"))
+		{
+			rotated_img.style.display = "block";
+			sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+		}
+		else
+		{
+			rotated_img.style.display = "none";
+			sidebar_img.style.filter = "";
+		}
+
+		if (document.getElementById(id).dataset.alt_src)
+		{
+			document.getElementById('sidebar_img').dataset.alt_src = document.getElementById(id).dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'block';
+		}
+		else
+		{
+			delete document.getElementById('sidebar_img').dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'none';
+		}
+		document.getElementById('main-content').style.width = '60%';
+		
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+		setSidebarTop();
+	}
+
+	function closeSidebar() {
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'none';
+		document.getElementById('main-content').style.width = '100%';
+		
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	document.getElementById("search").addEventListener("keypress", function(event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			search();
+		}
+	});
+
+	function search() {
+		const url = new URL('search', window.location.origin);
+		url.searchParams.append('search', document.getElementById("search").value);
+		window.location.href = url;
+	}
+
+		function randomCard() {
+				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
+				let random_card = card_list_arrayified[i];
+
+				const url = new URL('card', window.location.origin);
+				const params = {
+					set: random_card.set,
+					num: random_card.number,
+					name: random_card.card_name
+				}
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
+				}
+
+				window.location.href = url;
+			}
+	</script>
+</body>
+</html>
